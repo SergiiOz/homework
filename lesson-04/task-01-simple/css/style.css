@@ -1,0 +1,51 @@
+body {
+    max-width: 780px;
+    margin: auto;
+    padding-top: 5%;
+}
+
+main {
+    max-width: 760px;
+    font-size: 18px;
+}
+
+footer {
+    background: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+}
+
+h1 {
+    background: #a52a2a;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.cars{
+    display: flex;
+    justify-content: center;
+}
+
+.cars img {
+    border: 3px dashed black;
+    margin: 2px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.color{
+    color: #0000ff;
+}
+
+
+
+
+
