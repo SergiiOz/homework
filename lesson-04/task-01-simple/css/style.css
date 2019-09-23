@@ -1,5 +1,5 @@
 body {
-    max-width: 780px;
+    max-width: 760px;
     margin: auto;
     padding-top: 5%;
 }
@@ -7,6 +7,8 @@ body {
 main {
     max-width: 760px;
     font-size: 18px;
+    margin: auto;
+
 }
 
 footer {
@@ -16,16 +18,23 @@ footer {
     text-align: center;
 }
 
+
 h1 {
     background: #a52a2a;
     color: #ffffff;
     text-align: center;
 }
 
+header img {
+    max-height: 300px;
+    max-width: 100%
+}
+
 
 .cars{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cars img {
