@@ -40,6 +40,7 @@ header img {
 .cars img {
     border: 3px dashed black;
     margin: 2px;
+    max-width: 80px;
 }
 
 .italic {
