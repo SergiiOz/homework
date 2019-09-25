@@ -1,6 +1,6 @@
 #lesson-1
 ##task-01
-https://sergiioz.github.io/homework//lesson-01/task-01/index.html
+https://sergiioz.github.io/homework/lesson-01/task-01/index.html
 
 #lesson-02
 ##task-01
