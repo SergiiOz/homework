@@ -18,7 +18,7 @@ https://sergiioz.github.io
 
 ## lesson-04
 * task-01:
-https://sergiioz.github.io/homework/lesson-04/task-01-simple/index.html
+https://sergiioz.github.io/homework/lesson-04/task-01/index.html
 
 * task-02:
-https://sergiioz.github.io/homework/lesson-04/task-02-hard/index.html
+https://sergiioz.github.io/homework/lesson-04/task-02/index.html
