@@ -1,24 +1,24 @@
-# lesson-01
-* task-01
+## lesson-01
+* task-01:
 https://sergiioz.github.io/homework/lesson-01/task-01/index.html
 
 
-# lesson-02
-* task-01
+## lesson-02
+* task-01:
 https://sergiioz.github.io/homework/lesson-02/task-01/index.html
 
-* task-02
+* task-02:
 https://sergiioz.github.io/homework/lesson-02/task-02/index.html
 
 
-# lesson-03
-* task-01
+## lesson-03
+* task-01:
 https://sergiioz.github.io
 
 
-# lesson-04
-* task-01-simple
+## lesson-04
+* task-01:
 https://sergiioz.github.io/homework/lesson-04/task-01-simple/index.html
 
-* task-02-hard
+* task-02:
 https://sergiioz.github.io/homework/lesson-04/task-02-hard/index.html
