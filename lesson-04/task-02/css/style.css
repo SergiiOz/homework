@@ -1,6 +1,10 @@
+body {
+    background: rgb(226, 72, 72);
+}
+
 #main-box {
     background: #990909;
-    max-width: 960px;
+    max-width: 1200px;
     margin: auto;
     padding: 5px;
 }
@@ -26,47 +30,46 @@ header a img {
 }
 
 /* Nav */
-nav {
+
+.image-galery {
+    box-sizing: border-box;
     background: #000000;
-    color: white;
-}
-
-
-nav ul {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 10px;
+    margin: 5px 0;
 }
 
-nav ul li a {
+.image-items {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    width: 25%;
+}
+
+.image-items img {
+    width: 100%;
+}
+
+.image-items a {
     text-decoration: none;
-    color: White;
+    color: white;
     font-size: 18px;
 }
-
-.nav-galery-block{
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav-galery-image {
-    max-width: 23%;
-    margin: 5px;
-}
-
 
 /* MAIN */
 
 main {
+    box-sizing: border-box;
     min-height: 500px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* SECTION left*/
 
 #left-section {
-    float: left;
     background: #7d0909;
-    width: 25%;
+    max-width: 200px;
     height: 500px;
     overflow-x:hidden;
     font-size: 20px;
@@ -78,21 +81,19 @@ main {
 
 /* SECTION center */
 #center-section {
-    float: left;
     font-size: 20px;
     color: white;
     padding-left: 5px;
-    width: 45%;
+    max-width: 700px;
     height: 500px;
     overflow-x:hidden;
 }
 
 /* SECTION right */
 #right-section {
-    float: right;
     background: #e3dddd;
     padding: 0 5px;
-    width: 25%;
+    max-width: 300px;
     height: 500px;
     overflow-x:hidden;
 }
