@@ -70,6 +70,7 @@ main {
 #left-section {
     background: #7d0909;
     max-width: 200px;
+    padding-right: 5px;
     height: 500px;
     overflow-x:hidden;
     font-size: 20px;
@@ -83,10 +84,10 @@ main {
 #center-section {
     font-size: 20px;
     color: white;
-    padding-left: 5px;
+    padding: 0 5px;
     max-width: 700px;
     height: 500px;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 /* SECTION right */
@@ -95,7 +96,7 @@ main {
     padding: 0 5px;
     max-width: 300px;
     height: 500px;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 #right-section h4 {
