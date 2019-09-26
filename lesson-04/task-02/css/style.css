@@ -2,11 +2,12 @@ body {
     background: rgb(226, 72, 72);
 }
 
-#main-box {
+.main-box {
     background: #990909;
     max-width: 1200px;
     margin: auto;
     padding: 5px;
+    border-radius: 3px;
 }
 
 ul {
@@ -37,6 +38,7 @@ header a img {
     display: flex;
     justify-content: space-around;
     margin: 5px 0;
+    border-radius: 3px;
 }
 
 .image-items {
@@ -48,6 +50,7 @@ header a img {
 
 .image-items img {
     width: 100%;
+    border-radius: 3px;
 }
 
 .image-items a {
@@ -67,7 +70,7 @@ main {
 
 /* SECTION left*/
 
-#left-section {
+.left-section {
     background: #7d0909;
     max-width: 200px;
     padding-right: 5px;
@@ -76,12 +79,12 @@ main {
     font-size: 20px;
 }
 
-#left-section a {
+.left-section a {
     color: #e95b11;
 }
 
 /* SECTION center */
-#center-section {
+.center-section {
     font-size: 20px;
     color: white;
     padding: 0 5px;
@@ -91,7 +94,7 @@ main {
 }
 
 /* SECTION right */
-#right-section {
+.right-section {
     background: #e3dddd;
     padding: 0 5px;
     max-width: 300px;
@@ -99,12 +102,12 @@ main {
     overflow-x: hidden;
 }
 
-#right-section h4 {
+.right-section h4 {
     background: #bdbdbd;
     text-align: center;
 }
 
-#right-section hr {
+.right-section hr {
     width: 50%;
     margin: auto;
 }
