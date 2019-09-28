@@ -1,0 +1,11 @@
+OpenSans Semibold
+
+OpenSans
+
+background #121116
+
+WE ARE SOCIAL  (OpenSans Semibold)
+
+hr полоска ширина 230px
+
+© 2014 - Kasper All Right Reserved (OpenSans)

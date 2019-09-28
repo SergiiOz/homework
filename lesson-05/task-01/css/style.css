@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background: #121116;
+    color: white;
+    text-align: center;
+}
+
+
+/* Footer header */
+
+.logo-footer {
+    display: block;
+    margin-bottom: 5px;
+    padding: 40px 0 5px 0;
+}
+
+
+/* Footer main */
+.phrase {
+    text-transform: uppercase;
+    font-family: 'Open Sans semibold', sans-serif;
+    margin: 45px 0 5px 0;
+    padding: 5px 0;
+}
+
+
+ul {
+    margin: 15px 0 5px 0;
+    padding: 0;
+}
+
+li {
+   display: inline-block;
+   width: 40px;
+   padding: 5px 0;
+   list-style-type: none;
+}
+
+
+hr {
+    width: 230px;
+    margin:15px auto;
+}
+
+
+/* Footer footer */
+.signature p {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 75px;
+    padding: 5px 0 38px 0;
+}
+
+span,
+span a {
+    color: #19c8fa;
+    text-decoration: none;
+}
