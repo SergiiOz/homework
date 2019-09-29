@@ -1,0 +1,15 @@
+.round {
+    box-sizing: border-box;
+    width: 65px;
+    height: 65px;
+    background:yellow;
+    border-radius: 50%;
+    border: 1px solid green;
+}
+
+img {
+    display: block;
+    margin: auto;
+    padding-top: 16px;
+   }
+

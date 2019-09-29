@@ -1,0 +1,6 @@
+Font-family
+ProximaNova Regular
+
+ProximaNova Light
+
+round: 65px
