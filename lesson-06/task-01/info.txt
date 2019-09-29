@@ -1,6 +1,17 @@
-Font-family
-ProximaNova Regular
-
-ProximaNova Light
+высота от верхнего края до иконки: 55px
+от иконки до текста 1: 20px
+от текста 1 до текста 2: 23px
+высота текста в три ряда: 51px 
+от текста до нижнего края 66px
 
 round: 65px
+
+
+font-family: ProximaNova Regular;
+Responsive Design
+
+
+font-family: ProximaNova Light;
+font-size: 14px;
+Etiam sagittis velit vitae varius pellentesque. 
+Suspendisse posuer condimentum velit, id vehicula nisi.
