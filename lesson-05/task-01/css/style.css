@@ -5,57 +5,59 @@
 }
 
 footer {
+    padding: 120px 5px 38px 5px;
     background: #121116;
     color: white;
     text-align: center;
 }
 
 
-/* Footer header */
+/* Footer (header) */
+
+header {
+    margin-bottom: 50px;
+}
 
 .logo-footer {
     display: block;
-    margin-bottom: 5px;
-    padding: 40px 0 5px 0;
+    max-width: 200px;
+    margin: 0 auto;
 }
 
 
-/* Footer main */
+/* Footer (main) */
+
+main {
+    margin: 5px 0;
+}
+
 .phrase {
     text-transform: uppercase;
     font-family: 'Open Sans semibold', sans-serif;
-    margin: 45px 0 5px 0;
-    padding: 5px 0;
+    margin-bottom: 20px;
 }
 
-
-ul {
-    margin: 15px 0 5px 0;
-    padding: 0;
+hr {
+    width: 230px;
+    margin:5px auto 20px auto;
 }
+
 
 li {
    display: inline-block;
    width: 40px;
-   padding: 5px 0;
-   list-style-type: none;
+   
 }
 
 
-hr {
-    width: 230px;
-    margin:15px auto;
-}
+/* Footer (footer) */
 
-
-/* Footer footer */
-.signature p {
+.signature {
+    display: block;
     font-family: 'Open Sans', sans-serif;
-    margin-top: 75px;
-    padding: 5px 0 38px 0;
+    margin-top: 86px;
 }
 
-span,
 span a {
     color: #19c8fa;
     text-decoration: none;
