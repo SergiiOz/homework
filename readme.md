@@ -26,3 +26,7 @@ https://sergiioz.github.io/homework/lesson-04/task-02/index.html
 ## lesson-05
 * task-01:
 https://sergiioz.github.io/homework/lesson-05/task-01/index.html
+
+## lesson-06
+* task-01:
+https://sergiioz.github.io/homework/lesson-06/task-01/index.html
