@@ -1,15 +1,35 @@
+
+article {
+    text-align: center;
+    font-size: 14px;
+    width: 230px;
+}
+
 .round {
     box-sizing: border-box;
     width: 65px;
     height: 65px;
-    background:yellow;
+    background:#1c7bc3;
     border-radius: 50%;
-    border: 1px solid green;
+    border: 1px solid #1c7bc3;
+    margin: auto;
+}
+
+.round:hover {
+    background: #2a69a6;
+    border: 1px solid white;
 }
 
 img {
     display: block;
     margin: auto;
-    padding-top: 16px;
+    padding-top: 17px;
    }
 
+   h2 {
+       text-transform: uppercase;
+   }
+
+
+
+ 
