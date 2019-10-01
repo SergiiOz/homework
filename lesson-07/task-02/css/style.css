@@ -30,6 +30,7 @@ main {
 ul {
     text-align: center;
     font-size: 0;
+    border: 1.5px solid #ffffff;
 }
 
 li {
