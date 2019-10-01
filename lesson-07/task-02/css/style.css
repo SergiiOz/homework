@@ -88,3 +88,7 @@ li {
 .whole {
     width: 100%;
 }
+
+span {
+    display: block;
+}
