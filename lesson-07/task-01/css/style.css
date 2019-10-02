@@ -11,37 +11,49 @@
     margin: 0 auto;
 }
 
-h5 {
-    font-size: 12px;
-    font-family: "Montserat Bold";
-    margin-bottom: 37px;
-    opacity: 0.6;
-}
 
+/* HEADER */
 header {
     padding-top: 50px;
+    margin-bottom: 108px;
 }
+
 header > p {
     width: 525px;
     margin: auto;
-    font-family: "PTSans Regular";
+    font-family: 'PT Sans', sans-serif;
     font-size: 18px;
     opacity: 0.6;
 }
 
+h5 {
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 37px;
+    opacity: 0.6;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    color: #27b4b6; 
+    margin-bottom: 45px;
+}
+
+
 main {
-    padding-top: 108px;
     margin-bottom: 138px;
+}
+
+
+.icon-wrapper {
+    margin-bottom: 56px;
+    padding-top: 55px;
 }
 
 svg {
     width: 69px;
     height: 69px;
-}
-
-.icon-wrapper {
-    margin-bottom: 56px;
-    padding-top: 55px;
 }
 
 ul {
@@ -56,27 +68,25 @@ li {
     border: 1px solid #ece2e2;
 }
 
-h1 {
-    font-size: 48px;
-    font-family: "Montserat Regular";
-    color: #27b4b6; 
-    margin-bottom: 45px;
-}
 
 h4 {
     font-size: 21px;
     padding-bottom: 34px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 li > p {
     
     font-size: 14px;
+    font-family: 'PT Sans', sans-serif;
     width: 230px;
     margin: auto;
     text-transform: none;
     opacity: 0.7;
 }
 
+
+/* ACTIONS */
 li:hover {
     background-color: #27b4b6;
     color: #ffffff;
