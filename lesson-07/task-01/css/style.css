@@ -18,15 +18,7 @@ header {
     margin-bottom: 108px;
 }
 
-header > p {
-    width: 525px;
-    margin: auto;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 18px;
-    opacity: 0.6;
-}
-
-h5 {
+.phrase {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 37px;
@@ -40,7 +32,16 @@ h1 {
     margin-bottom: 45px;
 }
 
+header > p {
+    width: 525px;
+    margin: auto;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    opacity: 0.6;
+}
 
+
+/* MAIN */
 main {
     margin-bottom: 138px;
 }
@@ -69,7 +70,7 @@ li {
 }
 
 
-h4 {
+.title {
     font-size: 21px;
     padding-bottom: 34px;
     font-family: 'Montserrat', sans-serif;
