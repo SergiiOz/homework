@@ -1,0 +1,65 @@
+
+
+1.
+padding-top: 143px;
+font-size: 12px;
+font-family: Montserat Bold.
+who we are
+
+2
+padding-top: 37px;
+width: 458px
+font-family: Montserat Regular;
+font-size: 48px;
+background-color: #27b4b6;
+Hello & Namaste
+
+3.
+padding-top: 45px;
+width: 512px;
+font-family: PTSans Regular;
+font-size: 18px; 
+We do not build websites but user experiences. We judge our performance according to the impact it makes
+
+
+
+4 block colums (must change from backrground: #f7f7f7 to #27b4b6) 
+padding-top: 108px;
+width: 230px;
+height: 420px
+
+
+
+padding-top: 56px;
+icons
+якорь
+диамант
+очки
+монитор
+
+
+
+
+
+padding-top: 56px;
+font-size: 21px;
+font-family: "Montserat Regular"
+
+web design
+
+web development
+
+Graphics
+
+Illustrations
+
+
+padding-top: 34
+font-size: 14px;
+font-family: PTSans Regular;
+width: 174px;
+
+Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis.
+
+
+padding-bottom: 138 px;
