@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Miso";
+    src: url("../fonts/miso-cufonfonts/miso.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Miso Bold";
+    src: url("../fonts/miso-cufonfonts/miso-bold.otf");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Lato Light";
+    src: url("../fonts/lato-fonts/Lato-Light.ttf");
+    font-style: normal;
+    font-weight: lighter;
+}

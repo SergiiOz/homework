@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* MAIN */
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    height: 600px;
+    background-color: #fdde7e;
+    text-align: center;
+    margin: 50px 5px 5px 5px;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+
+
+/* COLUMN */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+    width: 362px;
+    height: 444px;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+
+/* add to the GOLD cup */
+.center {
+    height: 500px;
+}
+
+
+/* inside the column */
+.price {
+    font-family: "Miso Bold";
+    font-size: 70px;
+    color: #02995b;
+}
+
+.title {
+    font-family: "Miso";
+    font-size: 56px;
+}
+
+img {
+    max-width: 140px;
+}
+
+.title::first-letter {
+    text-transform: uppercase;
+}
+
+.description {
+    font-family: "Lato Light";
+    font-size: 20px;
+    opacity: 0.8;
+    width: 154px;
+}
