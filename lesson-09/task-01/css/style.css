@@ -44,7 +44,7 @@ article {
     margin-bottom: 52px;
 }
 
-.paragraph:last-child{
+.paragraph:last-of-type{
     margin-bottom: 0;
 }
 
