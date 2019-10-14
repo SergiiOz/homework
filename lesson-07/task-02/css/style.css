@@ -27,63 +27,65 @@ main {
     margin-bottom: 30px;
 }
 
-ul {
+.list-items {
     text-align: center;
     font-size: 0;
+    background-color: #ffffff;
     border: 1.5px solid #ffffff;
 }
 
-li {
+.item {
     display: inline-block;
     width: 25%;
     font-size: 14px;
     padding: 15px 0;
     border: 1.5px solid #ffffff;
+    border-radius: 5px;
 }
 
 /*background blocks */
 
-.lisbon {
+.item-blue {
     background-color: #2793cb;
 }
 
-.paris {
+.item-turquoise {
     background-color: #24bdc8;
 }
 
-.belgrad {
+.item-lilac {
     background-color: #966f97;
 }
 
-.moscow {
+.item-red {
     background-color: #c75444;
 }
 
-.telaviv {
+.item-orange {
     background-color: #e97145;
 }
 
-.cair {
+.item-yellow {
     background-color: #ffca5f;
 }
 
-.newyork {
+.item-lightgreen {
     background-color: #95c297;
 }
 
-.newdalhi {
+.item-dirtygreen {
     background-color: #609394;
 }
 
-.sanfrancisco {
+.item-rose {
     background-color: #cf7294;
 }
 
-.tokyo {
+.item-green {
     background-color: #298c65;
 }
 
-.sydney {
+.item-purple {
     background-color: #646996;
 }
 
