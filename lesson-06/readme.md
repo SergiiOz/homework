@@ -1,0 +1,5 @@
+* task-01:
+https://sergiioz.github.io/homework/lesson-06/task-01/index.html
+
+* task-02:
+https://sergiioz.github.io/homework/lesson-06/task-02/index.html
