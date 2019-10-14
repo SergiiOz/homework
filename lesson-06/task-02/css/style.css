@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    transition: all .1s ease-in;
+}
+
+body {
+    background-color: #373f41;
+    font-family: "Trebuchet", Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    background-color: #414749;
+    color: #cd8482;
+    margin-bottom: 25px;
+    padding: 10px 0 10px 0;
+}
+
+
+/* MAIN */
+main {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.items {
+    list-style-type: none;
+    background-color: #85849a;
+    color: #ffffff;
+    padding: 10px 0 10px 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input,
+label {
+    cursor: pointer;
+}
+
+/* every second item get new background */
+.items:nth-of-type(2n) {
+    background-color: #78778f;
+}
+
+/* added text to Label */
+label[for="pickies"]:after {
+    content: " (for the next lessons about CSS)";
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+label[for="apples"]:after {
+    content: " (for more CSS manipulations)";
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+label[for="oranges"]:after {
+    content: " (because they are awesome)";
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+label[for="plates"]:after {
+    content: " (hm... hey always disappear)";
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+label[for="sake"]:after{
+    content: " (for my friends)";
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* ACTIONS */
+.items:hover{
+    background-color: #5f6174;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.items:active {
+    background-color: rgb(233, 112, 112);
+}
+
+input:checked + label {
+    text-decoration-line: line-through;
+    color: #9a9aa7;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #414749;
+    color: #cd8482; 
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+
