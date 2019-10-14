@@ -96,6 +96,22 @@ input:checked + label {
 }
 
 
+/* klick on block li and text will be crossed out text*/
+li {
+    position: relative;
+}
+
+input[type="checkbox"]::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0; 
+    bottom: 0;
+}
+
+
 /* FOOTER */
 footer {
     background-color: #414749;
@@ -105,5 +121,4 @@ footer {
     text-align: center;
     padding: 10px 0 10px 0;
 }
-
 
