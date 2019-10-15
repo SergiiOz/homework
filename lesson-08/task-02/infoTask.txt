@@ -1,0 +1,62 @@
+image-main w740h540
+image w360h540
+margin beetween blocks 20px
+padding-left to text 28px
+
+image-main
+HansKendrick Heavy
+font-size: 30px
+line-height: 36px
+color: white;
+
+
+image
+datetime
+HansKendrick Medium
+font-size: 13px;
+
+
+title
+HansKendrick Heavy
+font-size: 22px;
+line-height: 30px;
+=======================
+main-image
+November 28, 2015
+
+Fantastic Designs Of 2015
+Concept Cars
+
+=======================
+image-01
+November 24, 2015
+
+'How To Find Design 
+Inspiration In The Simple 
+Things Around You'
+
+=======================
+image-02
+November 18, 2015
+
+The Only Guide To 
+Choosing Website 
+Photos You’ll Ever Need
+
+=======================
+image-03
+November 12, 2015
+
+Growth Hack Your Way 
+to a Successful 
+Freelance Career
+
+=======================
+image-04
+November 08, 2015
+
+Get 80% Off DSLR 
+Photography Course 
+Bundle
+
+
