@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #464f54;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.page-wrapper {
+    position: relative;
+    background-color: #ffffff;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.page {
+    margin-left: 60px;
+    border-left: 3px solid lightgrey;
+    padding:  202px 132px 10px 60px;
+}
+
+
+/* HEADER */
+header {
+    padding-top: 30px;
+    margin-bottom: 62px;
+}
+
+.signature {
+    margin-bottom: 50px;
+    font-family: 'Proxima Nova Regular';
+    letter-spacing: 4px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #b5b5b5;
+
+}
+
+.title-main {
+    font-family: 'FuturaPT Heavy';
+    font-size: 78px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.caption {
+    font-size: 30px;
+    color: #8f8f8f;
+}
+
+.text {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* ASIDE */
+.aside-block {
+    position: absolute;
+    left: 30%;
+    transform: translate(-10%, -150%);
+    background-color: #181818;
+    color: #ffffff;
+    width: 100%;
+    padding: 50px 60px;
+}
+
+.aside-description {
+    font-family: 'Proxima Nova Regular';
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: 0.6;
+}
+
+.aside-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+}
+
+/*Aside ICONS block */
+.aside-icons-block {
+    display: flex;
+    background-color: #f8be2d;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    list-style-type: none;
+    padding: 20px 10px 20px 42px;
+}
+
+.material-icons {
+    font-size: 40px;
+    opacity: 0.5;
+}
+
+
+/* Mirroring ImageView contents in icons*/
+.text-fields {
+    transform: scaleX(-1);
+}
+
+
+/* ACTIONS */
+.material-icons:hover { 
+    color: rgba(255, 255, 255, 1); 
+    opacity: 1.0;
+    cursor: pointer;
+}

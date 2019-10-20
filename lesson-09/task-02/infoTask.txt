@@ -1,0 +1,29 @@
+font-family: 
+PlayfairDisplay Regular,
+ProximaNova Regular,
+FuturaPT Heavy
+
+.page width 1060px
+
+black block: width 876 height 190
+text smal: font-family: ProximaNova Regular, 15px
+text big: font-family: PlayfairDisplay, 48 px "Like Tears In Ra|"
+
+
+yellow block: width 812 height 76
+
+white block:
+
+date: ProximaNova Regular, 20px ("Roy Batty, 2019")
+
+h1
+font-family: FuturaPT Heavy, 78px ("Like Tears in Rain")
+
+text-subtitle:  italic<  30px("Where am I going? How long have I got?")
+
+paragraph 1: 28px;
+
+("I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhauser gate. All those moments will be lost in time... like tears in rain... Time to die.")
+
+paragraph 2: 
+("I don't know why he saved my life. Maybe in those last moments he loved life more than he ever had before. Not just his life - anybody's life; my life. All he'd wanted were the same answers...")
