@@ -13,7 +13,6 @@ body{
 }
 
 .page-wrapper {
-    position: relative;
     background-color: #ffffff;
     max-width: 1060px;
     margin: 0 auto;
@@ -22,7 +21,7 @@ body{
 .page {
     margin-left: 60px;
     border-left: 3px solid lightgrey;
-    padding:  202px 132px 10px 60px;
+    padding:  0px 132px 10px 60px;
 }
 
 
@@ -65,13 +64,12 @@ header {
 
 /* ASIDE */
 .aside-block {
-    position: absolute;
-    left: 30%;
-    transform: translate(-10%, -150%);
+    position: relative;
+    transform: translate(20%, -50%);
+    max-width: 960px;
+    padding: 50px 60px;
     background-color: #181818;
     color: #ffffff;
-    width: 100%;
-    padding: 50px 60px;
 }
 
 .aside-description {
@@ -90,12 +88,15 @@ header {
 /*Aside ICONS block */
 .aside-icons-block {
     display: flex;
-    background-color: #f8be2d;
+    justify-content: flex-start;
     position: absolute;
-    right: 0;
+    left: 10%;
     bottom: 0;
+    transform: translateY(100%);
     list-style-type: none;
+    width: 100%;
     padding: 20px 10px 20px 42px;
+    background-color: #f8be2d;
 }
 
 .material-icons {
@@ -104,7 +105,7 @@ header {
 }
 
 
-/* Mirroring ImageView contents in icons*/
+/* Mirroring ImageView 'Tt' in icons'*/
 .text-fields {
     transform: scaleX(-1);
 }
