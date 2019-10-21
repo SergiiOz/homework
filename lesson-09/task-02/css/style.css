@@ -32,7 +32,7 @@ header {
     margin-bottom: 62px;
 }
 
-.signature {
+.header-signature {
     margin-bottom: 50px;
     font-family: 'Proxima Nova Regular';
     letter-spacing: 4px;
@@ -42,14 +42,14 @@ header {
 
 }
 
-.title-main {
+.header-title {
     font-family: 'FuturaPT Heavy';
     font-size: 78px;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
-.caption {
+.header-caption {
     font-size: 30px;
     color: #8f8f8f;
 }
