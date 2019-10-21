@@ -1,0 +1,82 @@
+body {
+	background-color: #b07cf7;
+}
+
+.header-block {
+	padding-top: 102px;
+	margin-bottom: 50px;
+}
+
+.header-title: 
+"Blog"
+font-family: Raleway Bold;
+font-size: 90px;
+color: #ffffff;
+
+header-title-description: 
+"Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit." 
+font-family: Raleway light;
+font-size: 17px;
+opacity: 0.7;
+
+main {
+	margin-bottom: 50px;
+}
+
+.items-block {
+
+}
+
+.item {
+	width: 370px;
+	height: 310px;
+}
+
+.item-date-block{
+	width: 60px;
+	height: 60px;
+	border-radius: 4px;
+	background-color: #262626;
+	opacity: 0.5;
+}
+
+.item-date-text {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	font-family: Raleway Bold;
+	font-size: 32px; (number)
+	font-size: 21px; (month)
+	padding: 8px;
+	
+}
+
+.item-title:
+"Green Smoothies: Too Much of a Good Thing?"
+"Growing Food and a “Thirst” for Innovation"
+"Pesticides & Food: What You Need to Know"
+font-family: Raleway Bold;
+font-size: 20px;
+
+
+.item-footer:
+"By Auskteez - 2 hours ago"
+"By Auskteez - 3 hours ago"
+"By Auskteez - 6 hours ago"
+font-family: Raleway Light;
+font-size: 13px;
+
+.button:
+"view more"
+font-family: Relaway light;
+font-size: 20px;
+
+ {
+	width: 200px;
+	height: 54px;
+	background-color: #f72b3b;
+}
+
+
