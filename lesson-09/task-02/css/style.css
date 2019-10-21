@@ -38,7 +38,6 @@ header {
     font-size: 20px;
     text-transform: uppercase;
     color: #b5b5b5;
-
 }
 
 .header-title {
@@ -65,7 +64,7 @@ header {
 /* ASIDE */
 .aside-block {
     position: relative;
-    transform: translate(20%, -50%);
+    transform: translate(150px, -100px);
     max-width: 960px;
     padding: 50px 0 60px 50px;
     background-color: #181818;
@@ -94,23 +93,23 @@ hr {
     display: flex;
     justify-content: flex-start;
     position: absolute;
-    left: 10%;
+    left: 50px;
+    right: 0;
     bottom: 0;
     transform: translateY(100%);
     list-style-type: none;
-    width: 100%;
-    padding: 20px 10px 20px 42px;
+    padding: 18px 10px 18px 42px;
     background-color: #f8be2d;
 }
 
 .material-icons {
     font-size: 40px;
     opacity: 0.5;
+    padding: 0 5px;
 }
 
-
 /* Mirroring ImageView 'Tt' in icons'*/
-.text-fields {
+.mirror-view-icon {
     transform: scaleX(-1);
 }
 
