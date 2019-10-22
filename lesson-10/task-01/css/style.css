@@ -8,58 +8,138 @@ body {
     background-color: #b07cf7;
 }
 
-/* .container {
+.container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 1200px;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 50px 0;
+}
 
+/* HEADER */
+.header-block {
+    max-width: 570px;
+    text-align: center;
+    margin: 0 auto 50px auto;
+}
+.header-title {
+    margin-bottom: 20px;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.header-desctiption {
+    font-size: 17px;
+    line-height: 25px;;
+    opacity: 0.7;
+}
+
+
+/* ITEMS-BLOCK */
 .items-block {
     display: flex;
     justify-content: center;
 }
 
+
+
+/* ITEM */
 .item-wrapper {
-    max-width: 370px;
+    max-width: 33.3%;
     list-style-type: none;
+    padding: 0 15px; 
 }
+
 
 .item {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     position:relative;
-    margin: 0 10px;
+    /*for background image */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    height: 310px;
+    padding: 20px;
 }
 
-
+  /* backgound image */
 .item-picture1 {
-    background-image: url("../images/image-01.jpg");
+    background-image: url("../images/img-01.jpg");
 }
 
 .item-picture2 {
-    background-image: url("../images/image-02.jpg");
+    background-image: url("../images/img-02.jpg");
 }
 
 .item-picture3 {
-    background-image: url("../images/image-03.jpg");
+    background-image: url("../images/img-03.jpg");
 }
 
+/* DATE BLOCK */
 .item-date-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
     width: 60px;
 	height: 60px;
 	border-radius: 4px;
 	background-color: #262626;
-	opacity: 0.5;
+    opacity: 0.6;
+    text-transform: uppercase;
+    padding: 3px;
+}
+
+.date-number {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.date-month {
+   font-size: 20px;
+   font-weight: 800;
 }
 
 .item-title {
-    flex-grow: 1;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.item-footer {
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.6;
+}
+
+/* BUTTON */
+.button-view {
+    width: 200px;
+    height: 54px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 50px;
+    background-color: #f72b3b;
+    color: #ffffff;
+
+}
+
+/* ACTIONS */
+.item:hover .item-date-block{
+    border-radius: 50%;
+    transition: all 0.7s ease-out;
+    background-color: red;
+
 }
