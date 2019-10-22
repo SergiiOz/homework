@@ -137,6 +137,10 @@ body {
 }
 
 /* ACTIONS */
+.item:hover {
+    cursor: pointer;
+}
+
 .item:hover .item-date-block{
     border-radius: 50%;
     transition: all 0.7s ease-out;
