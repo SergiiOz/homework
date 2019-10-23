@@ -68,6 +68,7 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
     height: 310px;
     padding: 20px;
+    transition: all 0.6s ease-out;
 }
 
   /* backgound image */
@@ -98,6 +99,7 @@ body {
     opacity: 0.6;
     text-transform: uppercase;
     padding: 3px;
+    transition: all 0.6s ease-out;
 }
 
 .date-number {
@@ -116,6 +118,7 @@ body {
     font-weight: 700;
     margin-bottom: 24px;
     opacity: 0.9;
+    transition: all 0.6s ease-out;
 }
 
 .item-footer {
@@ -141,24 +144,16 @@ body {
 /* ACTIONS */
 .item:hover {
     cursor: pointer;
-    transition: all 0.6s ease-out;
 }
 
 .item:hover .item-date-block{
     border-radius: 50%;
     background-color: red;
-    transition: all 0.6s ease-out;
 }
 
 .item:hover .item-title {
     transform: translateX(10px);
     text-shadow: 0 -3px 10px #000000;
-    transition: all 0.6s ease-out;
 }
 
-.item:not(:hover),
-.item:not(:hover) .item-date-block, 
-.item:not(:hover) .item-title {
-    transition: all 0.6s ease-out;
-}
     
