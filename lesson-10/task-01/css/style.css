@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: all 0.6s ease-out;
 }
 
 
@@ -142,15 +141,24 @@ body {
 /* ACTIONS */
 .item:hover {
     cursor: pointer;
+    transition: all 0.6s ease-out;
 }
 
 .item:hover .item-date-block{
     border-radius: 50%;
     background-color: red;
+    transition: all 0.6s ease-out;
 }
 
 .item:hover .item-title {
     transform: translateX(10px);
     text-shadow: 0 -3px 10px #000000;
+    transition: all 0.6s ease-out;
+}
+
+.item:not(:hover),
+.item:not(:hover) .item-date-block, 
+.item:not(:hover) .item-title {
+    transition: all 0.6s ease-out;
 }
     
