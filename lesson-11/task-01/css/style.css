@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.text {
+    font-weight: 300;
+    font-size: 17px;
+}
+
+
+/* BACKGROUND PAGES */
+.background-page {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-page__first {
+    position: relative;
+    background-image: url('../images/image-01.1.jpg');
+    height: 1000px;
+}
+
+.background-page__second {
+    background-image: url('../images/image-02.jpg');
+    height: 700px;
+}
+
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 46px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+}
+
+/* NAVIGATION */
+.nav {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.nav__item {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+    padding: 5px 0;
+}
+
+/* MAIN */
+.main {
+    max-width: 1200px;
+    padding: 216px 15px 0 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.main__title {
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 34px;
+}
+
+.main__text {
+    max-width: 370px;
+    margin-bottom: 34px;
+}
+
+/* button */
+.btn {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: #ff6033;
+    color: #ffffff;
+    padding: 20px 25px;
+}
+
+
+.scroll-icon {
+    position: absolute;
+    bottom: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.footer__description {
+    padding-top: 180px;
+}
+
+
+.footer__title {
+    font-weight: 700; 
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+
+.footer__text {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+
+/* ACTIONS */
+.nav__item:hover .nav__link {
+    border-top: 3px solid #ff6033;
+}
+
