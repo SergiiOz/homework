@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-image: url('../images/img-01.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header__inner {
+    max-width: 370px;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.main {
+    display: flex;
+}
+
+.main__inner {
+    width: 50%;
+}
+
+.main__inner_right {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.form__input {
+    margin-bottom: 14px;
+    padding: 10px;
+
+}
+
+.form__input_background {
+    background-color: rgba(0, 196,196, 0.3);  
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.form__input_background::placeholder {
+    color: #ffffff;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.form__input:focus {
+   background-color: rgb(0, 196, 196);
+   border-left: 4px solid rgb(1, 146, 103);  
+}
+
+.form__button {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+.form__button_middle {
+    width: 200px;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.form__button_primary {
+    background-color: rgb(60, 172, 236);
+    color: #ffffff;
+}
+
+.main__info {
+    max-width: 500px;
+}
+
+/* .info {
+    padding: 0 15px;
+} */
+
+.info__block {
+   margin-bottom: 20px;
+}
+
+.info__title {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.info__text {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    background-color: #000000; 
+    color: #ffffff;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+.footer__text {
+    font-size: 16px;
+    font-weight: 300;
+}
