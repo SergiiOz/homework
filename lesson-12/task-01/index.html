@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -13,38 +14,50 @@
     <div class="page-wrapper">
         <!-- HEADER -->
         <header class="header">
-            <h1 class="header__title">Contact</h1>
-            <p class="header__description">For new projects, ideas, business or anything
-                you'd like to discuss, contact with me!</p>
+            <div class="header__inner">
+                <h1 class="header__title">Contact</h1>
+                <p class="header__description">For new projects, ideas, business or anything
+                    you'd like to discuss, contact with me!</p>
+            </div>
         </header>
 
         <!-- MAIN -->
         <main class="main">
-            <!-- MAIN__WRAPPER--left -->
-            <div class="main__inner">
+            <!-- MAIN__INNER_left -->
+            <div class="main__inner main__inner_left">
 
                 <form class="form" action="#">
-                    <input class="form__input form__input_size_m" type="text" name="fullname" placeholder="Your Full Name...">
-                    <input class="form__input form__input_size_m" type="email" name="email" placeholder="Your email...">
-                    <textarea class="form__textarea form__texarea_size_m" name="message" cols="30" rows="10"
+                    <input class="form__input form__input_background" type="text" name="fullname"
+                        placeholder="Your Full Name...">
+                    <input class="form__input form__input_background" type="email" name="email"
+                        placeholder="Your email...">
+                    <input class="form__input form__input_background" type="tel" name="phone"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your phone number...">
+                    <textarea class="form__input form__input_background" name="message" cols="30" rows="7"
                         placeholder="Your message..."></textarea>
-                    <input class="form__submit form__submit_size_m" type="submit" value="Send">
+                    <input class="form__button form__button_middle form__button_primary" type="submit" value="Send">
                 </form>
             </div>
 
-            <!-- MAIN__WRAPPER--RiGHT -->
-            <div class="main__inner">
+            <!-- MAIN__INNER_RiGHT -->
+            <div class="main__inner main__inner_right">
 
-                <address class="address">
-                    <p class="address__title">Adress</p>
-                    <p class="address__text">123 City name, Street, City, Country</p>
+                <div class="info main__info">
+                    <div class="info__block">
+                        <p class="info__title">Address</p>
+                        <p class="info__text">123 City name, Street, City, Country</p>
+                    </div>
 
-                    <p class="address__title">Email</p>
-                    <p class="adress__text">cahee@domain.com</p>
+                    <div class="info__block">
+                        <p class="info__title">Email</p>
+                        <p class="info__text">cahee@domain.com</p>
+                    </div>
 
-                    <p class="address__title">Phone</p>
-                    <p class="address__text">+012 345 6789</p>
-                </address>
+                    <div class="info__block">
+                        <p class="info__title">Phone</p>
+                        <p class="info__text">+012 345 6789</p>
+                    </div>
+                </div>
 
             </div>
         </main>
