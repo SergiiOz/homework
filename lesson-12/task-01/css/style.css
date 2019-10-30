@@ -17,15 +17,19 @@ body {
     height: 100%;
 }
 
-.page-wrapper {
+.page-wrapper__top {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 15px 15px 0;
     font-family: 'Raleway', sans-serif;
+}
+
+.page-wrapper__bottom {
+    background-color: #000000; 
 }
 
 .header {
@@ -132,8 +136,9 @@ form {
     display: flex;
     justify-content: space-between;
     padding: 15px 0;
-    background-color: #000000; 
     color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -144,4 +149,8 @@ form {
 .footer__text {
     font-size: 16px;
     font-weight: 300;
+}
+
+.footer__text_color_red {
+    color: #e90d0d;
 }
