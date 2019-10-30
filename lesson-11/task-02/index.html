@@ -9,7 +9,8 @@
 </head>
 <body>
     <div class="background-wrapper">
-        <div class="wrapper-content">
+        <!-- C-CARD BLOCK-->
+        <div class="c-card">
             <header class="header">
                 <div class="header__logo">
                     <!-- LOGO -->
@@ -18,14 +19,53 @@
                     </span>
                 </div>
             </header>
-            <main>
+            <main class="main">
                 <!--IMAGES SLIDER  -->
                 <div class="main__left">
-
+                    <div class="image__wrapper">
+                        <img class="picture" src="./images/img-02.jpg" alt="image">
+                    </div>
                 </div>
 
                 <!-- INFO BLOCK -->
                 <div class="main__right">
+                    <div class="c-card__inner">
+                        <h1 class="c-card__title">
+                            Nike SB Stefan Janoski Max
+                        </h1>
+                        <p class="c-card__description">Unisex Skateboarding Shoe (Men's)</p>
+                    </div>
+
+                    <!--RATING -->
+                    <div class="rating">
+
+                    </div>
+
+                    <!-- SIZE and QUANTITY -->
+                    <form class="form" action="#">
+                        <div class="form__inner">
+                            <select class="form__select" name="size" id="">
+                                <option class="form__options" value="">Size</option>
+                                <option class="form__options" value="8.5">US 8.5</option>
+                                <option class="form__options" value="9">US 9</option>
+                                <option class="form__options" value="9.5">US 9.5</option>
+                                <option class="form__options" value="10">US 10</option>
+                                <option class="form__options" value="10.5">US 10.5</option>
+                                <option class="form__options" value="11">US 11</option>
+                            </select>
+    
+                            <select class="form__select" name="quantity" id="">
+                                <option class="form__options" value="">Qty</option>
+                                <option class="form__options" value="1">1</option>
+                                <option class="form__options" value="2">2</option>
+                                <option class="form__options" value="3">3</option>
+                                <option class="form__options" value="4">4</option>
+                                <option class="form__options" value="5">5</option>
+                            </select>
+                        </div>
+
+                        <button class="button form__button">Add to cart</button>
+                    </form>
 
                 </div>
             </main>
