@@ -9,22 +9,39 @@ body {
 }
 
 /* BACKGROUND PAGES */
-.wrapper-page {
+.background-page {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Raleway', sans-serif;
 }
 
-.wrapper-page__first {
+.background-page__first {
     position: relative;
     background-image: url('../images/image-01.1.jpg');
     height: 100%;
 }
 
-.wrapper-page__second {
+.background-page__second {
     background-image: url('../images/image-02.jpg');
     height: 100%;
+}
+
+/* PAGES WRAPPERS */
+.wrapper-first {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 1200px;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+.wrapper-second {
+    display: flex;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
@@ -32,9 +49,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 46px 15px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .logo {
@@ -66,15 +81,13 @@ body {
 /* MAIN */
 .main {
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: flex-start; */
-    max-width: 1200px;
+    align-items: center;
     padding: 0 15px;
-    margin: 0 auto;
+    flex: 1;
 }
 
 .main__description {
-    padding-top: 100px;
+    width: 370px;
 }
 
 .main__title {
@@ -96,9 +109,12 @@ body {
     font-size: 20px;
     font-weight: 300;
     text-transform: uppercase;
+    padding: 20px 25px;
+}
+
+.main__btn {
     background: #ff6033;
     color: #ffffff;
-    padding: 20px 25px;
 }
 
 .scroll-icon {
@@ -112,17 +128,16 @@ body {
 
 .footer {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
     color: #ffffff;
+    padding: 0 15px;
 }
 
 .footer__description {
-    padding-top: 150px;
+    width: 500px;
 }
-
 
 .footer__title {
     font-size: 90px;
@@ -131,7 +146,6 @@ body {
 }
 
 .footer__text {
-    max-width: 500px;
     margin-bottom: 20px;
     font-size: 17px;
     font-weight: 300;
