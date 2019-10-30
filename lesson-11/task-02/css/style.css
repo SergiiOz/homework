@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.background-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/img-01PNG.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding: 50px 0;
+}
+
+.wrapper-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #111a28;
+    height: 100%;
+    width: 800px;
+    border-radius: 8px;
+}
+
+.main {
+    height: 100%;
+}
+
