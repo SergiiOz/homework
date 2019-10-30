@@ -20,7 +20,7 @@ body {
 .page-wrapper__top {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
