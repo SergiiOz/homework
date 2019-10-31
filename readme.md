@@ -75,3 +75,7 @@ https://sergiioz.github.io/homework/lesson-11/task-02/index.html
 ## lesson-12
 * task-01:
 https://sergiioz.github.io/homework/lesson-12/task-01/index.html
+
+## lesson-13
+* task-01:
+https://sergiioz.github.io/homework/lesson-13_SVG/task-01/index.html
