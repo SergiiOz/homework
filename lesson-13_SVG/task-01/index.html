@@ -6,45 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SVG Lesson-13</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="wrapper__background_header">
-            <div class="page-inner">
+    <div class="page">
+        <div class="page__background_header page_height_full">
+            <div class="page__container">
+                <!-- HEADER -->
+                <header class="header">
+
+                    <div class="header__inner">
+                        <div class="header__logo">
+                            <div class="logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="70px" height="72px">
+                                    <path fill-rule="evenodd" stroke="rgb(255, 255, 255)" stroke-width="2px"
+                                        stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                        d="M63.675,68.857 L34.860,13.860 L6.046,68.857 L63.675,68.857 Z" />
+                                    <path fill-rule="evenodd" stroke="rgb(246, 247, 252)" stroke-width="2px"
+                                        stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+                                        d="M34.500,1.000 C53.002,1.000 68.000,15.870 68.000,34.214 C68.000,52.558 53.002,67.429 34.500,67.429 C15.998,67.429 1.000,52.558 1.000,34.214 C1.000,15.870 15.998,1.000 34.500,1.000 Z" />
+                                    <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                                        d="M34.860,63.857 C36.850,63.857 38.462,65.456 38.462,67.429 C38.462,69.401 36.850,71.000 34.860,71.000 C32.871,71.000 31.258,69.401 31.258,67.429 C31.258,65.456 32.871,63.857 34.860,63.857 Z" />
+                                    <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                                        d="M61.516,63.857 C63.505,63.857 65.118,65.456 65.118,67.429 C65.118,69.401 63.505,71.000 61.516,71.000 C59.527,71.000 57.914,69.401 57.914,67.429 C57.914,65.456 59.527,63.857 61.516,63.857 Z" />
+                                    <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                                        d="M6.043,63.857 C8.032,63.857 9.645,65.456 9.645,67.429 C9.645,69.401 8.032,71.000 6.043,71.000 C4.054,71.000 2.441,69.401 2.441,67.429 C2.441,65.456 4.054,63.857 6.043,63.857 Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h1 class="header__title">
+                            Working <br>
+                            with design lab
+                        </h1>
+                        <p class="header__description">We’ve been helping startups launch and grow their businesses.
+                            <br>
+                            We help you to fill the gap between development,<br>
+                            design and product management.</p>
+                    </div>
+
+                </header>
+
+                <div class="page__scroll-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px"
+                        height="37px">
+                        <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                            d="M11.497,37.001 C5.156,37.001 -0.001,31.837 -0.001,25.490 L-0.001,11.416 C-0.001,5.440 4.612,0.468 10.543,-0.007 L12.451,-0.007 C18.383,0.472 22.996,5.444 22.996,11.416 L22.996,25.490 C22.996,31.837 17.838,37.001 11.497,37.001 ZM21.088,11.416 C21.088,6.121 16.785,1.815 11.497,1.815 C6.208,1.815 1.906,6.121 1.906,11.416 L1.906,25.490 C1.906,30.785 6.209,35.091 11.497,35.091 C16.785,35.091 21.088,30.785 21.088,25.490 L21.088,11.416 ZM11.497,13.075 C10.583,13.075 9.840,12.331 9.840,11.416 C9.840,10.501 10.583,9.757 11.497,9.757 C12.410,9.757 13.154,10.501 13.154,11.416 C13.154,12.331 12.411,13.075 11.497,13.075 Z" />
+                    </svg>
+                </div>
 
             </div>
         </div>
     </div>
-    <div class="wrapper">
-        <div class="wrapper__descripion wrapper__background_half">
-            <div class="wrapper__inner">
-                <fieldset class="fieldset">
-                    <legend class="legend">About us</legend>
-                    <p>When you work with us, you are part of a team of committed collaborators.
-                        All aspects of our software development process are integrated, iterative and agile.</p>
-                    <p>Our approach unifies design, development and
-                        product management to create exceptional products.
-                        We start each project by understanding your business goals,
-                        the user’s needs and the product requirements.
-                        Then we help translate them into effective and elegant solutions.</p>
-                </fieldset>
+
+    <div class="page">
+        <div class="page_background page_height_half">
+
+            <div class="page__container page_position_center">
+
+                <article class="article">
+                    <fieldset class="fieldset">
+                        <legend class="fieldset__legend">About us</legend>
+                        <div class="fieldset__text-block">
+                            <p>When you work with us, you are part of a team of committed collaborators.
+                                All aspects of our software development process are integrated, iterative and agile.</p>
+                            <p>Our approach unifies design, development and
+                                product management to create exceptional products.
+                                We start each project by understanding your business goals,
+                                the user’s needs and the product requirements.
+                                Then we help translate them into effective and elegant solutions.</p>
+                        </div>
+                    </fieldset>
+                </article>
+
             </div>
         </div>
-        <div class="wrapper__background_services">
-            <div class="wrapper__inner">
-                <fieldset class="fieldset">
-                    <legend class="legend">About us</legend>
-                    <p>When you work with us, you are part of a team of committed collaborators.
-                        All aspects of our software development process are integrated, iterative and agile.</p>
-                    <p>Our approach unifies design, development and
-                        product management to create exceptional products.
-                        We start each project by understanding your business goals,
-                        the user’s needs and the product requirements.
-                        Then we help translate them into effective and elegant solutions.</p>
+
+        <div class="page__background_services page_height_half">
+
+            <div class="page__container page_position_center">
+                <fieldset class="fieldset fieldset_color">
+                    <legend class="fieldset__legend">SERVICES</legend>
+                    <div class="fieldset__text-block">
+                        <p>Before we sign a contract or write a line of code our team will spend the necessary time
+                            needed
+                            to understand your product vision.
+                            The outcome of this scoping session is a proposal or high-level statement of work.
+                            Based on your requirements, we can provide a complete offering or just the pieces you need.
+                        </p>
+                    </div>
                 </fieldset>
             </div>
+
         </div>
     </div>
     <div class="wrapper"></div>
