@@ -6,9 +6,7 @@
 
 body,
 html {
-    /* height: 100hv; */
     font-family: 'Lato', sans-serif;
-
 }
 
 .page {
@@ -34,6 +32,7 @@ html {
     height: 100%;
     max-width: 900px;
     margin: 0 auto;
+    padding: 15px 5px;
 }
 
 .page_position_center {
@@ -87,22 +86,40 @@ html {
 
 .fieldset {
     text-align: center;
+    width: 100%;
+    padding: 20px 0; 
 }
 
 .fieldset__legend {
+    font-size: 34px;
+    text-transform: uppercase;
     padding: 0 104px;
 }
 
+.fieldset__logo-title-text {
+    padding: 20px 0;
+}
+
+.fieldset__logo {
+    padding: 15px 0;
+}
+
+.fieldset__title {
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
 .fieldset__text-block {
-   padding: 20px 160px;
+   /* padding: 20px 160px; */
+   font-size: 16px;
+   max-width: 550px;
+   margin: 0 auto;
 }
 
 .fieldset_color {
     color: #ffffff;
     border-color: #ffffff;
 }
-
-
 
 .page__background_services {
     background-image: url('../images/services.jpg');
