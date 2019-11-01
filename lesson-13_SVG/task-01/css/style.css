@@ -13,6 +13,13 @@ html {
     position: relative;
 }
 
+.page__container {
+    height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
 .page__background_header {
     background-image: url('../images/img-header-bg.jpg');
     background-position: top right;
@@ -20,21 +27,25 @@ html {
     background-repeat: no-repeat;
 }
 
+.page__background_second {
+    background-image: url('../images/services.jpg');
+    background-position: center;
+    background-size: cover;
+ }
+
+
+
+ /* Modifier */
 .page_height_full {
     height: 100vh;
 }
 
+ /* Modifier */
 .page_height_half {
     height: 50vh;
 }
 
-.page__container {
-    height: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 15px 5px;
-}
-
+/* Modifier */
 .page_position_center {
     display: flex;
     justify-content: center;
@@ -50,9 +61,9 @@ html {
     padding: 10px;
 }
 
+/* HEADER */
 .header {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -84,6 +95,7 @@ html {
 }
 
 
+/* FIELDSET block */
 .fieldset {
     text-align: center;
     width: 100%;
@@ -110,22 +122,17 @@ html {
 }
 
 .fieldset__text-block {
-   /* padding: 20px 160px; */
    font-size: 16px;
    max-width: 550px;
    margin: 0 auto;
 }
 
+/* Modifier */
 .fieldset_color {
     color: #ffffff;
     border-color: #ffffff;
 }
 
-.page__background_services {
-    background-image: url('../images/services.jpg');
-    background-position: center;
-    background-size: cover;
- }
 
  .button {
     background-color: #3c3c3c;
@@ -135,11 +142,71 @@ html {
     border: 2px solid transparent;  
 }
 
+
 .button:active {
-    border-color: #fff;
+    border-color:  #2b2b3049;
 }
 
 .fieldset__button {
     padding: 15px 0;
 }
+
+/* change color botton */
+.button:hover {
+    background-color: #5373aa;
+    cursor: pointer;
+}
+
+
+/* gallery images */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0;
+    background-color: #ffffff;
+    border: 3px solid #ffffff;
+    height: 50vh;
+}
+
+.gallery__item {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px 10px;
+    border: 3px solid #ffffff;
+    font-size: 34px;
+    color: #ffffff;
+    padding: 10px;
+    width: 30%;
+    height: 25vh; 
+}
+
+
+/* item size */
+.gallery__item_wide {
+    width: 40%;
+}
+
+.gallery__text {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    height: 100%;
+}
+
+
+.gallery__link {
+    text-decoration: none;
+    color: white;
+}
+
+.footer__logo {
+    color: black;
+}
+
+
+
+
 
