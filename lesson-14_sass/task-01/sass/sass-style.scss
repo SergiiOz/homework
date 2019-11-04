@@ -91,30 +91,45 @@ $width-block_half: 50%;
     &__description {
        @extend %fonts-primary;
     }
+
+    &__social {
+        width: 100%;
+    }
+
 }
 
 .social {
     display: flex;
-    flex-flow: row;
+    justify-content: center;
 }
 
 .item-social {
+    @extend %position-center;
+    list-style-type: none;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    border: 1px solid blue;
+    border: 2px solid #cccccc;
+    margin: 0 5px;
 }
 
 .icons {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    fill: #cccccc; 
+}
+
+.item-social:hover {
+    border-color: #7380f3;
+
+    &:hover .icons {
+        fill: #7380f3;
+    }
 }
 
 
 .picture {
     border: 1px solid $color-main;
-}
-
-.item-social {
-    list-style-type: none;
 }
 
 .btn {
