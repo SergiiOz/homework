@@ -93,6 +93,20 @@ $width-block_half: 50%;
     }
 }
 
+.social {
+    display: flex;
+    flex-flow: row;
+}
+
+.item-social {
+    border-radius: 50%;
+    border: 1px solid blue;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+}
 
 
 .picture {
@@ -113,7 +127,7 @@ $width-block_half: 50%;
 }
 
 .btn:hover {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.4);
 }
 
 
