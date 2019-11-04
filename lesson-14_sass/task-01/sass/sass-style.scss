@@ -31,6 +31,7 @@ $width-block_half: 50%;
     padding: 0 15px
 }
 
+// HEADER
 .header {
     padding: 40px 5px 0 5px;
     margin-bottom: 40px;
@@ -49,6 +50,7 @@ $width-block_half: 50%;
     }  
 }
 
+// MAIN
 .main{
     display: flex;
     font-size: 0;
@@ -56,6 +58,7 @@ $width-block_half: 50%;
 
 }
 
+// SECTIONS
 .section {
     @extend %position-center;
     text-align: center;
@@ -90,14 +93,16 @@ $width-block_half: 50%;
 
     &__description {
        @extend %fonts-primary;
+       line-height: 24px;
     }
 
     &__social {
         width: 100%;
     }
-
+    
 }
 
+// block SOCIAL
 .social {
     display: flex;
     justify-content: center;
@@ -111,27 +116,25 @@ $width-block_half: 50%;
     border-radius: 50%;
     border: 2px solid #cccccc;
     margin: 0 5px;
+    
+    &:hover {
+        border-color: #7380f3;
+    }
+    
+    &:hover .icons {
+        fill: #7380f3;
+    }
 }
 
+// ICONS
 .icons {
     width: 20px;
     height: 20px;
     fill: #cccccc; 
 }
 
-.item-social:hover {
-    border-color: #7380f3;
 
-    &:hover .icons {
-        fill: #7380f3;
-    }
-}
-
-
-.picture {
-    border: 1px solid $color-main;
-}
-
+// BUTTON
 .btn {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
@@ -139,12 +142,17 @@ $width-block_half: 50%;
     text-transform: uppercase; 
     border: 1px solid $color-main;
     padding: 5px 15px;
+    
+
+    &:hover {
+        box-shadow: 0 2px 11px rgba(0, 0, 0, 0.4);
+    }
 }
 
-.btn:hover {
-    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.4);
+// picture section__inner_first
+.picture {
+    border: 1px solid $color-main;
 }
-
 
 
 
