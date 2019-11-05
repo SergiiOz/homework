@@ -112,4 +112,5 @@
     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.4); }
 
 .picture {
+  width: 100%;
   border: 1px solid #ffcc00; }
