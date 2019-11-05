@@ -33,6 +33,7 @@ $width-block_half: 50%;
 
 // HEADER
 .header {
+    position: relative;
     padding: 40px 5px 0 5px;
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -47,7 +48,30 @@ $width-block_half: 50%;
 
     &__description {
         @extend %fonts-primary;
-    }  
+        opacity: 0.7;
+    } 
+    
+    // added horizontal line after header
+    &::after {
+        content: "";
+        display:block;
+        max-width: 500px;
+        height: 1px;
+        margin: 20px auto 0 auto;
+        background-color: $color-main;
+    }
+    
+    //added the icon in the center horizontal line
+    &__icons {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        fill: $color-main;
+        background-color: white;
+    }
 }
 
 // MAIN
@@ -66,12 +90,12 @@ $width-block_half: 50%;
     font-size: 14px;
     padding: 40px 5px;    
     
-
+    //left section
     &__inner_first {
         @extend %position-center;
     }
     
-
+    //right section
     &__inner_second {
         @extend %position-center;
         justify-content: space-between;
@@ -84,6 +108,7 @@ $width-block_half: 50%;
         font-family:'Roboto', sans-serif;
         font-size: 36px;
         font-weight: 700;
+        opacity: 0.7;
     }
 
     &__subtitle {
@@ -96,8 +121,14 @@ $width-block_half: 50%;
        line-height: 24px;
     }
 
+    //block icons
     &__social {
         width: 100%;
+    }
+
+    //modify section
+    &_border_right {
+        border-right: 1px solid $color-main;
     }
     
 }
@@ -154,6 +185,9 @@ $width-block_half: 50%;
 .picture {
     border: 1px solid $color-main;
 }
+
+
+
 
 
 
