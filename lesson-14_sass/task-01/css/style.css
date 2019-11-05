@@ -81,6 +81,7 @@
 
 .social {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   font-size: 0; }
 
