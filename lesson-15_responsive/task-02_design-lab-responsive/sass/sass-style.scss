@@ -134,6 +134,10 @@ html {
     
     &__logo {
         margin-bottom: 90px;
+
+        @include small() {
+            margin-bottom: 40px;
+        }
     }
     
     &__title {
