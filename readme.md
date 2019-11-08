@@ -83,3 +83,8 @@ https://sergiioz.github.io/homework/lesson-13_SVG/task-01/index.html
 ## lesson-14
 * task-01:
 https://sergiioz.github.io/homework/lesson-14_sass/task-01/index.html
+
+## lesson-15
+* task-02:
+https://sergiioz.github.io/homework/lesson-15_responsive/task-02_design-lab-responsive/index.html
+
