@@ -45,8 +45,16 @@ html {
         margin: 0 auto;
         padding: 5px 0;
 
-        @include large {
+        @include large() {
             max-width: 710px;
+        }
+
+        @include medium() {
+            max-width: 520px;
+        }
+
+        @include small() {
+            max-width: 340px;
         }
     }
 
@@ -70,17 +78,29 @@ html {
         left: 50%;
         transform: translate( -50%, -100%);
         padding: 5px;
+
+        @include medium(){
+            display: none;
+        }
     }
      
      
       /* Modifier */
     &_height_full {
         height: 100vh;
+
+        @include small(){
+           height: unset;
+        }
     }
      
       /* Modifier */
     &_height_half {
         height: 50vh;
+
+        @include small() {
+            height: unset;
+        }
     }
      
      /* Modifier */
@@ -106,10 +126,18 @@ html {
         text-transform: uppercase;;
         width: 610px;
         padding: 0 5px;
+
+        @include small(){
+            max-width: 100%;
+        }
     }
     
     &__logo {
         margin-bottom: 90px;
+
+        @include small() {
+            margin-bottom: 40px;
+        }
     }
     
     &__title {
@@ -134,10 +162,18 @@ html {
     width: 100%;
     padding: 20px 0; 
     
+    @include small() {
+        border: none;
+    }
+
     &__legend {
         font-size: 34px;
         text-transform: uppercase;
         padding: 0 104px;
+
+        @include small() {
+            padding: 0 5px;
+        }
     }
     
     &__logo-title-text {
@@ -157,7 +193,16 @@ html {
        font-size: 16px;
        max-width: 550px;
        margin: 0 auto;
+
+        @include medium {
+            max-width:500px;
+        }
+
+        @include small(){
+            max-width: 320px;
+        }
     }
+
     
     /* Modifier */
     &_color {
@@ -175,9 +220,15 @@ html {
 .button {
     background-color: #3c3c3c;
     color: #ffffff;
-    padding: 20px 120px;
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 300px;
     outline: none;
     border: 2px solid transparent;  
+
+    @include small() {
+        max-width: 150px;
+    }
 
     &:active {
         border-color:  #2b2b3049;
@@ -222,6 +273,12 @@ html {
         @include large(){
             width: 50%;
         }
+
+        @include medium(){
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
     }
     
     &__text {
@@ -243,6 +300,10 @@ html {
 
         @include large(){
             width: 50%;
+        }
+
+        @include medium(){
+            width: 100%;
         }
     }
    
