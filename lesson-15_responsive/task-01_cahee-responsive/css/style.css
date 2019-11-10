@@ -21,15 +21,39 @@
     position: relative;
     background-image: url("../images/image-01.1.jpg");
     height: 100vh; }
+    @media screen and (max-width: 720px) {
+      .page_background_first {
+        background-position: top left; } }
   .page_background_second {
     background-image: url("../images/image-02.jpg");
     height: 100vh; }
+    @media screen and (max-width: 960px) {
+      .page_background_second {
+        background-position: top right; } }
 
 /* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 0 15px; }
+  padding: 0 15px;
+  position: relative; }
+  .header__menu-icon {
+    display: none;
+    align-items: center;
+    margin-right: 20px; }
+    @media screen and (max-width: 720px) {
+      .header__menu-icon {
+        display: flex; } }
+    .header__menu-icon:hover {
+      cursor: pointer; }
+    .header__menu-icon:hover + .nav {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      background: #ffffff;
+      cursor: pointer; }
 
 .logo {
   font-family: 'Pacifico', cursive;
@@ -48,7 +72,7 @@
       max-width: 500px; } }
   @media screen and (max-width: 720px) {
     .nav {
-      max-width: 400px; } }
+      display: none; } }
   .nav__item {
     font-size: 16px;
     font-weight: 700;
@@ -59,7 +83,11 @@
         width: 33.33333%; } }
     @media screen and (max-width: 720px) {
       .nav__item {
-        width: 50%; } }
+        width: 100%;
+        font-size: 20px;
+        padding: 20px 10px;
+        text-align: center;
+        border-top: 1px solid black; } }
   .nav__link {
     text-decoration: none;
     color: #000000;
@@ -128,7 +156,6 @@
   padding: 0 15px; }
   @media screen and (max-width: 960px) {
     .footer {
-      color: #000000;
       justify-content: center;
       text-align: center; } }
   .footer__description {
