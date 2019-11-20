@@ -33,6 +33,7 @@ $screen-sm: 576px;
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
+    height: 100%;
 
     @include laptop-screen() {
         max-width: 760px;
@@ -49,7 +50,9 @@ $screen-sm: 576px;
 
 .header {
     display: flex;
+    flex-direction: column;
     height: 100vh;
+    text-align: center;
     color: #ffffff;
     
     &__top {
@@ -66,15 +69,37 @@ $screen-sm: 576px;
         padding: 20px 0;
     }
 
+    &__main-block {
+        max-width: 650px;
+    }
+
+    &__text-block {
+        margin-bottom: 54px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    //rename later )))
+    &--position_center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+
     // modifier
     &--background_img {
-        flex-direction: column;
         background-image: url('../images/Image-bg-01.jpg');
         background-position: top left;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
-
 }
+
+
+
 

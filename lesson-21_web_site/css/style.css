@@ -8,6 +8,7 @@
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  height: 100%;
 }
 @media screen and (max-width: 992px) {
   .wrapper {
@@ -27,7 +28,9 @@
 
 .header {
   display: flex;
+  flex-direction: column;
   height: 100vh;
+  text-align: center;
   color: #ffffff;
 }
 .header__top {
@@ -41,8 +44,22 @@
   justify-content: space-between;
   padding: 20px 0;
 }
+.header__main-block {
+  max-width: 650px;
+}
+.header__text-block {
+  margin-bottom: 54px;
+}
+.header__title {
+  text-transform: uppercase;
+}
+.header--position_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .header--background_img {
-  flex-direction: column;
   background-image: url("../images/Image-bg-01.jpg");
   background-position: top left;
   background-size: cover;
