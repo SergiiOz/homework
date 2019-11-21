@@ -52,6 +52,7 @@ $screen-sm: 576px;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     color: #ffffff;
     
@@ -61,24 +62,50 @@ $screen-sm: 576px;
 
     &__bottom {
         background-color: #5474fd;
+        text-transform: uppercase;
     }
 
     &__inner {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         padding: 20px 0;
     }
 
     &__main-block {
-        max-width: 650px;
+       max-width: 650px;
     }
 
     &__text-block {
+        min-width: 324px;
+        padding: 0 5px;
         margin-bottom: 54px;
     }
 
     &__title {
+        font-size: 48px;
         text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: 22px;
+        letter-spacing: 4px;
+        font-weight: 300;
+    }
+
+
+    &__logo {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    //  NAVIGATION
+    &__nav {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        min-width: 540px;
     }
 
     //rename later )))
@@ -100,6 +127,148 @@ $screen-sm: 576px;
 
 }
 
+
+
+//NAVIGATION, Humburger-icon
+.nav-toggler {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    
+    // ACTION
+    &:hover {
+        background-color: #3695ff;
+    }
+    
+    @include tablet-screen() {
+        display: flex;
+    }
+}
+
+.hamburger-icon {
+    fill: #ffffff;
+}
+
+
+// CHECKBOX and :checked in Navigation
+.nav-checkbox {
+    position: absolute;
+    top: -999999px;
+    left: -999999px;
+    visibility: hidden;
+    opacity: 0;
+    
+    &:checked ~ .nav {
+        display: flex;
+        flex-direction: column;
+        position:absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0, -100%);
+        background-color: #3680fe;
+        max-width: 150px;
+        
+        @include mobile-screen() {
+            max-width: 100%;
+        }
+    }
+    
+    &:checked ~ .nav-toggler {
+        background-color: #3695ff;
+    }
+}
+
+
+// MENU
+.nav {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 100%;
+    font-family: 'Aleo', serif;
+    font-size: 14px;
+    
+        
+    @include tablet-screen() {
+        display: none;
+    }
+    
+    // MENU ITEM
+    &__item {
+        padding: 10px 5px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        
+        @include tablet-screen() {
+            width: 100%;
+        }
+        
+        // ACTION
+        &:hover {
+            border-color: #71beeb;
+            border-color: #71beeb;
+        }
+    }
+    
+    // MENU link
+    &__link {
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+.search-form {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    min-width: 650px;
+    border: none;
+    
+    /* This bit draws the box around it */
+    // border:1px solid grey;
+    /* I've used padding so you can see the edges of the elements. */
+    // padding:2px;
+  }
+  
+  .search-input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+
+    &::placeholder {
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 14px;
+        letter-spacing: 3px;
+        opacity: 0.5;
+    }
+    &:focus {
+      /* removing the input focus blue box. Put this on the form if you like. */
+      outline: none;
+      box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
+    }
+  }
+  
+  
+  .btn {
+    /* Just a little styling to make it pretty */
+    min-width: 150px;
+    padding: 20px 5px;
+    background-color:#5474fd;
+    border:1px solid #ffffff;
+    color:white;
+    font-family: 'Aleo', serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 
 
 
