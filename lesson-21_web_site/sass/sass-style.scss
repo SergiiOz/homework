@@ -65,7 +65,14 @@ $screen-sm: 576px;
         text-transform: uppercase;
     }
 
-    &__inner {
+    &__inner-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__inner-bottom {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -73,6 +80,7 @@ $screen-sm: 576px;
     }
 
     &__main-block {
+       width: 100%;
        max-width: 650px;
     }
 
@@ -106,7 +114,13 @@ $screen-sm: 576px;
         display: flex;
         justify-content: flex-end;
         min-width: 540px;
+
+        @include tablet-screen() {
+            width: 100%;
+            min-width: unset;
+        }
     }
+
 
     //rename later )))
     &--position_center {
@@ -129,7 +143,7 @@ $screen-sm: 576px;
 
 
 
-//NAVIGATION, Humburger-icon
+//NAVIGATION
 .nav-toggler {
     display: none;
     justify-content: center;
@@ -142,7 +156,7 @@ $screen-sm: 576px;
     
     // ACTION
     &:hover {
-        background-color: #3695ff;
+        background-color: #8095f1;
     }
     
     @include tablet-screen() {
@@ -155,7 +169,7 @@ $screen-sm: 576px;
 }
 
 
-// CHECKBOX and :checked in Navigation
+// NAV-CHECKBOX and :checked in Navigation
 .nav-checkbox {
     position: absolute;
     top: -999999px;
@@ -170,21 +184,17 @@ $screen-sm: 576px;
         top: 0;
         right: 0;
         transform: translate(0, -100%);
-        background-color: #3680fe;
-        max-width: 150px;
-        
-        @include mobile-screen() {
-            max-width: 100%;
-        }
+        background-color: #8095f1;
+        max-width: 200px;
     }
     
     &:checked ~ .nav-toggler {
-        background-color: #3695ff;
+        background-color: #8095f1;
     }
 }
 
 
-// MENU
+// NAV
 .nav {
     display:flex;
     justify-content: space-between;
@@ -199,16 +209,12 @@ $screen-sm: 576px;
         display: none;
     }
     
-    // MENU ITEM
+    //NAV ITEM
     &__item {
         padding: 10px 5px;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
-        
-        @include tablet-screen() {
-            width: 100%;
-        }
-        
+              
         // ACTION
         &:hover {
             border-color: #71beeb;
@@ -227,20 +233,20 @@ $screen-sm: 576px;
     /* This bit sets up the horizontal layout */
     display:flex;
     flex-direction:row;
-    min-width: 650px;
+    width: 100%;
     border: none;
-    
-    /* This bit draws the box around it */
-    // border:1px solid grey;
-    /* I've used padding so you can see the edges of the elements. */
-    // padding:2px;
   }
   
   .search-input {
     /* Tell the input to use all the available space */
-    flex-grow:2;
+    flex-grow:1;
     /* And hide the input's outline, so the form looks like the outline */
     border:none;
+    padding-left: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #5d5d5d;
+    
 
     &::placeholder {
         text-align: center;
