@@ -10,21 +10,6 @@
   margin: 0 auto;
   height: 100%;
 }
-@media screen and (max-width: 992px) {
-  .wrapper {
-    max-width: 760px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .wrapper {
-    max-width: 560px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .wrapper {
-    max-width: 480px;
-  }
-}
 
 .header {
   display: flex;
@@ -88,17 +73,11 @@
     min-width: unset;
   }
 }
-.header--position_center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-.header--background_img {
+.header--background_img-01 {
   background-image: url("../images/image-bg-01.jpg");
-  background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top left;
 }
 
 .nav-toggler {
@@ -112,7 +91,7 @@
   transition: all 0.2s ease-out;
 }
 .nav-toggler:hover {
-  background-color: #8095f1;
+  background-color: #6880e8;
 }
 @media screen and (max-width: 768px) {
   .nav-toggler {
@@ -138,11 +117,11 @@
   top: 0;
   right: 0;
   transform: translate(0, -100%);
-  background-color: #8095f1;
+  background-color: #6880e8;
   max-width: 200px;
 }
 .nav-checkbox:checked ~ .nav-toggler {
-  background-color: #8095f1;
+  background-color: #6880e8;
 }
 
 .nav {
@@ -165,12 +144,27 @@
   border-bottom: 1px solid transparent;
 }
 .nav__item:hover {
-  border-color: #71beeb;
-  border-color: #71beeb;
+  border-color: #ffffff;
+  border-color: #ffffff;
 }
 .nav__link {
   text-decoration: none;
   color: #ffffff;
+}
+
+.btn {
+  min-width: 224px;
+  padding: 20px 5px;
+  background-color: #5474fd;
+  color: white;
+  font-family: "Aleo", serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.4);
 }
 
 .search-form {
@@ -180,57 +174,31 @@
   width: 100%;
   border: none;
 }
-
-.search-input {
+.search-form__button {
+  min-width: 150px;
+  padding: 20px 5px;
+  font-size: 14px;
+  border: 1px solid #ffffff;
+}
+.search-form__input {
   /* Tell the input to use all the available space */
   flex-grow: 1;
-  /* And hide the input's outline, so the form looks like the outline */
   border: none;
   text-align: center;
   font-size: 14px;
   color: #5d5d5d;
 }
-.search-input::placeholder {
+.search-form__input::placeholder {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
   font-size: 14px;
   letter-spacing: 3px;
   opacity: 0.5;
 }
-.search-input:focus {
+.search-form__input:focus {
   /* removing the input focus blue box. Put this on the form if you like. */
   outline: none;
   box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
-}
-
-.btn {
-  /* Just a little styling to make it pretty */
-  min-width: 150px;
-  padding: 20px 5px;
-  background-color: #5474fd;
-  border: 1px solid #ffffff;
-  color: white;
-  font-family: "Aleo", serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.main__section--background_img-02 {
-  background-image: url("../images/image-bg-02.jpg");
-  height: 100vh;
-}
-.main__section--background_img-03 {
-  background-image: url("../images/image-bg-03.jpg");
-  height: 100vh;
-}
-.main__section--background_img-04 {
-  background-image: url("../images/image-bg-04.jpg");
-  height: 100vh;
-}
-.main__section--background_img-05 {
-  background-image: url("../images/image-bg-05.jpg");
-  height: 100vh;
 }
 
 .main__section-inner {
@@ -251,24 +219,64 @@
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  padding: 0 15px;
+  padding-left: 15px;
 }
 .main__title {
+  margin-bottom: 50px;
   font-family: "Aleo", serif;
   font-size: 36px;
   font-weight: 400;
-  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .main__title {
+    font-size: 30px;
+  }
 }
 .main__text {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
   margin-bottom: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  font-weight: 300;
   opacity: 0.6;
+}
+@media screen and (max-width: 992px) {
+  .main__text {
+    line-height: unset;
+  }
 }
 .main__gallery {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+}
+.main__section {
+  height: 100vh;
+}
+.main__section--background_img-02 {
+  background-image: url("../images/image-bg-02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+.main__section--background_img-03 {
+  background-image: url("../images/image-bg-03.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main__section--background_img-04 {
+  background-image: url("../images/image-bg-04.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main__section--background_img-05 {
+  background-image: url("../images/image-bg-05.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 .gallery__item {
@@ -277,8 +285,11 @@
 .gallery__picture {
   width: 100%;
 }
-.gallery__item--swing-left {
-  transform: translateX(-100px);
+.gallery__item--shift_left {
+  margin-right: 100px;
+}
+.gallery__item--shift_right {
+  margin-left: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
