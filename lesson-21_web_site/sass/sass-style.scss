@@ -133,7 +133,7 @@ $screen-sm: 576px;
 
     // modifier
     &--background_img {
-        background-image: url('../images/Image-bg-01.jpg');
+        background-image: url('../images/image-bg-01.jpg');
         background-position: top left;
         background-size: cover;
         background-repeat: no-repeat;
@@ -279,22 +279,22 @@ $screen-sm: 576px;
 
 .main__section {
     &--background_img-02 {
-        background-image: url('../images/Image-bg-02.jpg');
+        background-image: url('../images/image-bg-02.jpg');
         height: 100vh;
     }
 
     &--background_img-03 {
-        background-image: url('../images/Image-bg-03.jpg');
+        background-image: url('../images/image-bg-03.jpg');
         height: 100vh;
     }
     
     &--background_img-04 {
-        background-image: url('../images/Image-bg-04.jpg');
+        background-image: url('../images/image-bg-04.jpg');
         height: 100vh;
     }
 
     &--background_img-05 {
-        background-image: url('../images/Image-bg-05.jpg');
+        background-image: url('../images/image-bg-05.jpg');
         height: 100vh;
     }
 }
