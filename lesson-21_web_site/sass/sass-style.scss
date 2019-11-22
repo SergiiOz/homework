@@ -242,7 +242,6 @@ $screen-sm: 576px;
     flex-grow:1;
     /* And hide the input's outline, so the form looks like the outline */
     border:none;
-    padding-left: 15px;
     text-align: center;
     font-size: 14px;
     color: #5d5d5d;
@@ -298,6 +297,71 @@ $screen-sm: 576px;
         height: 100vh;
     }
 }
+
+
+
+.main {
+    
+    &__section-inner {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        color: #ffffff;
+    }
+    
+    &__section-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding-right: 15px;
+    }
+
+    &__section-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding: 0 15px;
+    }
+    
+    &__title {
+        font-family: 'Aleo', serif;
+        font-size: 36px;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+    
+    &__text {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        margin-bottom: 20px;
+        opacity: 0.6;
+    }
+    
+    &__gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+
+
+.gallery {
+    &__item {
+        max-width: 350px;
+    }
+    
+    &__picture {
+        width: 100%;
+    }
+
+    &__item--swing-left {
+        transform: translateX(-100px);
+    }
+}
+
 
 
 
