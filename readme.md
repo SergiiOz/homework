@@ -95,3 +95,6 @@ https://sergiioz.github.io/homework/lesson-15_responsive/task-02_design-lab-resp
 * task-01:
 https://sergiioz.github.io/homework/lesson-18_layouts/index.html
 
+## lesson-21
+* task:
+https://sergiioz.github.io/homework/lesson-21_web_site/index.html
