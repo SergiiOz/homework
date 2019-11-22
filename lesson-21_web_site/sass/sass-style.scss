@@ -277,4 +277,29 @@ $screen-sm: 576px;
   }
 
 
+.main__section {
+    &--background_img-02 {
+        background-image: url('../images/Image-bg-02.jpg');
+        height: 100vh;
+    }
+
+    &--background_img-03 {
+        background-image: url('../images/Image-bg-03.jpg');
+        height: 100vh;
+    }
+    
+    &--background_img-04 {
+        background-image: url('../images/Image-bg-04.jpg');
+        height: 100vh;
+    }
+
+    &--background_img-05 {
+        background-image: url('../images/Image-bg-05.jpg');
+        height: 100vh;
+    }
+}
+
+
+
+
 
