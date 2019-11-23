@@ -2,6 +2,10 @@ $screen-lg: 992px;
 $screen-md: 768px;
 $screen-sm: 576px;
 
+@mixin background-cover-norepeat {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 // screen size
 @mixin laptop-screen {
@@ -34,20 +38,10 @@ $screen-sm: 576px;
     padding: 0 15px;
     margin: 0 auto;
     height: 100%;
-
-    @include laptop-screen() {
-        max-width: 760px;
-    }
-
-    @include tablet-screen() {
-        max-width: 560px;
-    }
-
-    @include mobile-screen() {
-        max-width: 480px; 
-    }
 }
 
+
+// HEADER
 .header {
     display: flex;
     flex-direction: column;
@@ -101,14 +95,13 @@ $screen-sm: 576px;
         font-weight: 300;
     }
 
-
     &__logo {
         font-family: 'Josefin Sans', sans-serif;
         font-size: 24px;
         font-weight: 700;
     }
 
-    //  NAVIGATION
+    // HADER NAVIGATION
     &__nav {
         position: relative;
         display: flex;
@@ -122,21 +115,11 @@ $screen-sm: 576px;
     }
 
 
-    //rename later )))
-    &--position_center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
-
-
     // modifier
-    &--background_img {
+    &--background_img-01 {
         background-image: url('../images/image-bg-01.jpg');
+        @include background-cover-norepeat();
         background-position: top left;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
 }
@@ -156,7 +139,7 @@ $screen-sm: 576px;
     
     // ACTION
     &:hover {
-        background-color: #8095f1;
+        background-color: #6880e8;
     }
     
     @include tablet-screen() {
@@ -184,12 +167,12 @@ $screen-sm: 576px;
         top: 0;
         right: 0;
         transform: translate(0, -100%);
-        background-color: #8095f1;
+        background-color: #6880e8;
         max-width: 200px;
     }
     
     &:checked ~ .nav-toggler {
-        background-color: #8095f1;
+        background-color: #6880e8;
     }
 }
 
@@ -217,87 +200,190 @@ $screen-sm: 576px;
               
         // ACTION
         &:hover {
-            border-color: #71beeb;
-            border-color: #71beeb;
+            border-color: #ffffff;
+            border-color: #ffffff;
         }
     }
     
-    // MENU link
+    // NAV link
     &__link {
         text-decoration: none;
         color: #ffffff;
     }
 }
 
+// BUTTON (property primary)
+.btn {
+  min-width: 224px;
+  padding: 20px 5px;
+  background-color:#5474fd;
+  color:white;
+  font-family: 'Aleo', serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.4);
+  }
+}
+
+
+// SEARCH FORM
 .search-form {
     /* This bit sets up the horizontal layout */
     display:flex;
     flex-direction:row;
     width: 100%;
     border: none;
-  }
-  
-  .search-input {
-    /* Tell the input to use all the available space */
-    flex-grow:1;
-    /* And hide the input's outline, so the form looks like the outline */
-    border:none;
-    padding-left: 15px;
-    text-align: center;
-    font-size: 14px;
-    color: #5d5d5d;
-    
+ 
+    &__button {
+      min-width: 150px;
+      padding: 20px 5px;
+      font-size: 14px;
+      border: 1px solid #ffffff;
+    }
 
-    &::placeholder {
-        text-align: center;
+    &__input {
+      /* Tell the input to use all the available space */
+      flex-grow: 1;
+      border: none;
+      text-align: center;
+      font-size: 14px;
+      color: #5d5d5d;
+      
+  
+        &::placeholder {
+            text-align: center;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            opacity: 0.5;
+        }
+        
+        &:focus {
+            /* removing the input focus blue box. Put this on the form if you like. */
+            outline: none;
+            box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
+        }
+    }
+    
+}
+
+
+// MAIN
+
+.main {
+    
+    &__section-inner {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        color: #ffffff;
+    }
+
+ 
+    // LEFT Section
+    &__section-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding-right: 15px;
+    }
+    
+    // RIGHT Section
+    &__section-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        padding-left: 15px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        font-family: 'Aleo', serif;
+        font-size: 36px;
+        font-weight: 400;
+
+        @include tablet-screen() {
+            font-size: 30px;
+        }
+    }
+    
+    &__text {
+        margin-bottom: 20px;
         font-family: 'Josefin Sans', sans-serif;
-        font-size: 14px;
-        letter-spacing: 3px;
-        opacity: 0.5;
-    }
-    &:focus {
-      /* removing the input focus blue box. Put this on the form if you like. */
-      outline: none;
-      box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.3);
-    }
-  }
-  
-  
-  .btn {
-    /* Just a little styling to make it pretty */
-    min-width: 150px;
-    padding: 20px 5px;
-    background-color:#5474fd;
-    border:1px solid #ffffff;
-    color:white;
-    font-family: 'Aleo', serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 2px;
+        font-weight: 300;
+        opacity: 0.6;
 
-
-.main__section {
-    &--background_img-02 {
-        background-image: url('../images/image-bg-02.jpg');
-        height: 100vh;
-    }
-
-    &--background_img-03 {
-        background-image: url('../images/image-bg-03.jpg');
-        height: 100vh;
+        @include laptop-screen() {
+            line-height: unset;
+        }
     }
     
-    &--background_img-04 {
-        background-image: url('../images/image-bg-04.jpg');
-        height: 100vh;
+    &__gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
-    &--background_img-05 {
-        background-image: url('../images/image-bg-05.jpg');
+    
+    // MAIN section
+    &__section {
         height: 100vh;
+    
+        // modifier
+        &--background_img-02 {
+            background-image: url('../images/image-bg-02.jpg');
+            @include background-cover-norepeat();
+            background-position: top left;
+        }
+    
+        &--background_img-03 {
+            background-image: url('../images/image-bg-03.jpg');
+            @include background-cover-norepeat();
+            background-position: center;
+        }
+        
+        &--background_img-04 {
+            background-image: url('../images/image-bg-04.jpg');
+            @include background-cover-norepeat();
+            background-position: center;
+        }
+    
+        &--background_img-05 {
+            background-image: url('../images/image-bg-05.jpg');
+            @include background-cover-norepeat();
+            background-position: top left;
+         }
     }
 }
+
+
+
+.gallery {
+    &__item {
+        max-width: 350px;
+    }
+    
+    &__picture {
+        width: 100%;
+    }
+
+    &__item--shift_left {
+        margin-right: 100px;
+    }
+
+    &__item--shift_right {
+        margin-left: 100px;
+   }
+}
+
 
 
 
