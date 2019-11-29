@@ -1,6 +1,6 @@
 // Запросить у пользователя число от 0 до 9 и вывести ему спецсимвол, который расположен на этой клавише (1–!, 2–@, 3–# и т. д).
 
-let getNumber = Number(prompt("Please, write number from 0 to 9 "));
+let getNumber = Number(prompt("Task-2: Please, write number from 0 to 9 "));
 
 switch (getNumber) {
     case 0:

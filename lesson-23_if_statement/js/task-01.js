@@ -1,7 +1,7 @@
 // Запросить у пользователя его возраст и определить, кем он является: ребенком (0–2), подростком (12–18), взрослым
 //     (18_60) или пенсионером (60– ...).
 
-let age = Number(prompt("Please, write - how old are you? "));
+let age = Number(prompt("Task-01: Please, write - how old are you? "));
 
 if (age >= 0 && age <= 12) {
 
