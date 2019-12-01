@@ -98,3 +98,6 @@ https://sergiioz.github.io/homework/lesson-18_layouts/index.html
 ## lesson-21
 * task:
 https://sergiioz.github.io/homework/lesson-21_web_site/index.html
+
+## lesson-23
+task: https://sergiioz.github.io/homework/lesson-23_if_statement/index.html
