@@ -83,7 +83,7 @@ if (dayOfBirth <= 0 || dayOfBirth > 31) {
         outputMonth = monthOfBirth + 1;
 
     } else if (monthOfBirth === 2 && yearLeap === false) {
-        outputMonth = "Error! Entered year is not a leap year. This month doesn't have 29 days.";
+        alert("Error! Entered year is not a leap year. This month doesn't have 29 days.");
 
     } else {
         outputDay = dayOfBirth + 1;
@@ -101,7 +101,7 @@ if (dayOfBirth <= 0 || dayOfBirth > 31) {
         outputMonth = monthOfBirth + 1;
 
     } else if (monthOfBirth === 2) {
-        outputMonth = "Error! This month doesn't have 30 days";
+        alert("Error! This month doesn't have 30 days");
 
     } else {
         outputDay = dayOfBirth + 1;
@@ -123,7 +123,7 @@ if (dayOfBirth <= 0 || dayOfBirth > 31) {
         outputMonth = 1;
 
     } else {
-        outputMonth = "Error! This month doesn't have 31 days";
+        alert("Error! This month doesn't have 31 days");
 
     }
 
