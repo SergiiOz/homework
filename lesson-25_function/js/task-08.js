@@ -19,7 +19,7 @@ function convertHourToMinutes(min) {
     return result;
 }
 
-function convertAllToSeconds(hours, minutes, seconds) {
+function convertAllToSeconds(hours = 0, minutes = 0, seconds = 0) {
 
     result = convertMinuteToSeconds(convertHourToMinutes(hours)) + convertHourToMinutes(minutes) + seconds;
 
