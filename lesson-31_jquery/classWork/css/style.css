@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.window {
+  width: 400px;
+  height: 300px;
+  border: 2px solid blue;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.gallery {
+  display: flex;
+  font-size: 0;
+}
+
+.gallery__item {
+  border: 1px solid #000;
+  width: 400px;
+}
+
+.btn {
+  min-width: 200px;
+  padding: 5px 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
