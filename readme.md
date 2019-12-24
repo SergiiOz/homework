@@ -101,3 +101,7 @@ https://sergiioz.github.io/homework/lesson-21_web_site/index.html
 
 ## lesson-23
 task: https://sergiioz.github.io/homework/lesson-23_if_statement/index.html
+
+## lesson-32_slider
+task: https://sergiioz.github.io/homework/lesson-32_slider/index.html
+
