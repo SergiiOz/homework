@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue lesson-02</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    #app {
+        padding: 50px;
+    }
+
+    #inputField {
+        padding: 10px;
+        margin: 50px 0;
+        width: 200px;
+
+    }
+
+    .quad {
+        height: 200px;
+        width: 200px;
+        margin-bottom: 50px;
+        border: 1px solid #000;
+    }
+
+    .task {
+        margin: 20px 0;
+    }
+
+    button {
+        min-width: 50px;
+    }
+</style>
+
+<body>
+    <!-- #app use for framework Vue -->
+    <div id="app">
+
+        <h4>Task-01: enter number of color (#F00) - change background to quad</h4>
+        <h4>Task-02 if enter color #0f0 (in field input) - display word 'correct', if enter color 'red' - dispay word
+            'wrong'</h4>
+        <h4>Task-03 enter number 1-10 'wrong', 10-20 'cool', greater than 20 'write less'</h4>
+
+        <input id="inputField" v-model="color" type="text" placeholder="enter color #...">
+
+        <div class="quad" v-bind:style="{background: color}">{{ color }}</div>
+
+        <!-- =============================================================================-->
+
+        <!-- task-02 -->
+        <div v-if="color === '#0f0'">correct!!!</div>
+        <div v-if="color === 'red'">wrong!!!</div>
+
+        <!-- =============================================================================-->
+
+
+        <!-- task-03 -->
+        <div class="task">
+            <div v-if="color > 10 && color < 20">COOL</div>
+            <div v-if="color > 0 && color <= 10">WRONG</div>
+            <div v-if="color >= 20">write less than 20</div>
+        </div>
+
+        <!-- =============================================================================-->
+
+        <h4>Task-04: if press button '+' - increase width on 1px
+            if press button '-' - decrease width on 1px</h4>
+        <div class="task">
+            <button v-on:click="incr()">+</button>
+
+            <span style="display: inline-block" v-bind:style="{width: numba + 'px'}">
+                {{ numba }}
+            </span>
+
+            <button v-on:click="decr()">-</button>
+        </div>
+
+        <!-- =============================================================================-->
+
+        <h4>task-05: if press button - hide or unhide 'quad'</h4>
+        <div class="task">
+            <button v-on:click="toggleVisible">Toggle Visible</button>
+            <button v-on:click="toggleHide">Toggle Hide</button>
+            <div v-if="isVisible === true" class="quad">
+            </div>
+        </div>
+
+        <!-- =============================================================================-->
+
+        <h4>Task-06: list: if press button - display age</h4>
+        <!-- list[person] iterator in list is 'person' -->
+        <!-- access to first object in list -  app.list[0].age -->
+        <!-- for loop use app.list[person].age where person is iterator -->
+        <div class="task">
+            <ol>
+                <li v-for="(person, index) in list">
+                    {{ person.name }},
+                    {{ index }},
+
+                    <!-- {{ iterator.age }} -->
+                    <button v-on:click="showAgePerson(person)">show age</button>
+
+                    <p v-if="person.isVisibleAge === true">{{ person.age }}</p>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+    <script>
+
+
+
+        //Vue framework
+        var app = new Vue({
+
+            el: '#app',
+            data: {
+
+                color: '', //task-01 and task-02               
+                numba: 15, //task-03
+
+                isVisible: false, //task-05
+
+                //task-06: show this list
+                list: [
+                    { name: 'Vasya', age: 20, isVisibleAge: false },
+                    { name: 'Petro', age: 15, isVisibleAge: false },
+                    { name: 'Galyna', age: 60, isVisibleAge: false },
+                ],
+
+            },
+
+            methods: {
+                incr: function () { //task-04
+                    this.numba = this.numba + 1;
+                },
+
+                decr: function () { //task-04
+                    this.numba = this.numba - 1;
+                },
+
+                //task-05
+                toggleVisible: function () {
+                    this.isVisible = true;
+                    // if (this.isVisible === false) {
+                    //     this.isVisible = true;
+                    // } else {
+                    //     this.isVisible = false;
+                    // }
+                },
+
+                // task-05
+                toggleHide: function () {
+                    this.isVisible = false;
+                },
+
+                //task-06
+                showAgePerson: function (person) {
+                    person.isVisibleAge = !person.isVisibleAge;
+                    // app.list[1].isVisibleAge = true;
+                },
+
+            },
+        });
+
+    </script>
+
+</body>
+
+</html>
