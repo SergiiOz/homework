@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue course</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <h1>{{ product }}</h1>
+        <div>
+            <img v-bind:src="image" alt="">
+            <a v-bind:href="myLink">Vue site istruction</a>
+        </div>
+        <div>
+            <p v-if="inventory > 10">Stock</p>
+            <p v-else-if="inventory > 0 && inventory <= 10">Almost sold</p>
+            <p v-else>Out of stock</p>
+
+            <span v-if="onSale">"On Sale!"</span>
+            <span v-else>onSale</span>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                product: "Socks",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1z1rYedUXRHg6OEGfTRuvwkJnifHg7RiSLl7vvsrhUNaAgbI2&s",
+                myLink: "https://ru.vuejs.org/v2/guide/forms.html",
+                inventory: 0,
+                onSale: false,
+            }
+        })
+
+    </script>
+</body>
+
+</html>
