@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue work</title>
+</head>
+
+<style>
+    th,
+    td {
+        border: 1px solid #000;
+        width: 50px;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>#</th>
+                    <th v-on:click="sortList('name')">Name</th>
+                    <!--sortByName-->
+                    <th v-on:click="sortList('iq')">IQ</th>
+                    <!--sortByIq-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(person, index) in students">
+                    <td>
+                        <input v-model="person.isChecked" type="checkbox" v-on:change="onInputCnange">
+                    </td>
+                    <td>{{ index + 1 }}</td>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.iq }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div> {{ sumIQ }}</div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+    <script>
+
+
+
+        //Vue framework
+        var app = new Vue({
+
+            el: '#app',
+            data: {
+                sumIQ: 0,
+                students: [
+                    { name: 'Denis', iq: 120, isChecked: false },
+                    { name: 'Sasha', iq: 121, isChecked: false },
+                    { name: 'Yarik', iq: 13, isChecked: false },
+                    { name: 'Galya', iq: 27, isChecked: false },
+                ],
+            },
+
+            methods: {
+
+                onInputCnange() {
+                    let sum = 0;
+
+                    for (var i = 0; i < this.students.length; i++) {
+                        if (this.students[i].isChecked) {
+                            sum = sum + this.students[i].iq;
+                        }
+                    }
+
+                    this.sumIQ = sum;
+                },
+
+                sortList(field) {
+                    this.students.sort(function (a, b) {
+                        return a[field] < b[field] ? 1 : -1;
+                    });
+                }
+                // sortByName() {
+                //     this.students.sort(function (a, b) {
+                //         return a.name > b.name ? 1 : -1;
+                //     });
+                // },
+
+                // sortByIq() {
+                //     this.students.sort(function (a, b) {
+                //         return a.iq > b.iq ? 1 : -1;
+                //     });
+                // },
+
+            }
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>
