@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Price page</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <div id="app">
+
+        <div class="cart">
+            <button v-on:click="isChangeShowCart">My Cart</button>
+            <div class="cart__img">
+
+            </div>
+
+            <div class="cart__count">
+                {{ sumItem }}
+            </div>
+            <button v-on:click="clearCart">Clear Cart</button>
+
+        </div>
+
+        <!-- SHOPPING LIST -->
+        <div v-show="!isShowCart" class="item">
+
+            <h1>SHOPPING LIST</h1>
+            <ol>
+                <li v-for="item in list">
+
+                    <!-- IMAGE -->
+                    <div clss="item__img-block">
+                        <span class="item__img">{{ item.photo }}</span>
+                    </div>
+
+                    <p class="item__title">{{ item.name }}</p>
+
+                    <span class="item__price"> {{ item.price }}</span>
+                    <span>$ USA</span>
+
+                    <!-- BUTTON -->
+                    <div class="item__buttons-block">
+                        <button v-on:click="increment(item)">+</button>
+
+                        <span style="display: inline-block">
+                            {{ item.count }}
+                        </span>
+
+                        <button v-on:click="decrement(item)">-</button>
+
+                        <button v-on:click="isAddedChange(item)">ADD</button>
+                    </div>
+
+                </li>
+            </ol>
+        </div>
+
+
+        <!-- MY CART -->
+        <div v-show="isShowCart" class="item">
+            <h1>MY CART</h1>
+            <button v-on:click="isShowCart = false">Continious shopping</button>
+
+            <ol>
+                <!-- Created new array carList -->
+                <li v-for="item in cartList">
+
+                    <!-- IMAGE -->
+                    <div clss="item__img-block">
+                        <span class="item__img">{{ item.photo }}</span>
+                    </div>
+
+                    <p class="item__title">{{ item.name }}</p>
+
+                    <span class="item__price"> {{ item.price }}</span>
+                    <span>$ USA</span>
+
+                    <!-- BUTTON -->
+                    <div class="item__buttons-block">
+                        <button v-on:click="increment(item)">+</button>
+
+                        <span style="display: inline-block">
+                            {{ item.count }}
+                        </span>
+
+                        <button v-on:click="decrement(item)">-</button>
+
+                        <button v-on:click="isAddedChange(item)">ADD</button>
+                    </div>
+
+                </li>
+            </ol>
+
+            <div>
+                <span>total price:</span>
+                {{ totalPrice }}
+                <span>$ USA</span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
