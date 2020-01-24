@@ -66,18 +66,18 @@ var app = new Vue({
             this.sumItem = 0;
             this.cartList = [];
             this.totalPrice = 0;
-        },
-
-        isChangeShowCart: function () {
-            this.isShowCart = true;
-            this.createCartList();
-            this.totalSumPricing();
             //change isAdded to false
             this.list.forEach(person => {
                 if (person.isAdded === true){
                     person.isAdded = false;
                 }
             });
+        },
+
+        isChangeShowCart: function () {
+            this.isShowCart = true;
+            this.createCartList();
+            this.totalSumPricing();
         },
 
         //create list added to cart
