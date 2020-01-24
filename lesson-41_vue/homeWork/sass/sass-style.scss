@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #19b319;
+
+
+    &__img-block {
+        width: 200px;
+
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+}
+
+button {
+    min-width: 30px;
+}

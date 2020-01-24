@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #19b319;
+}
+.item__img-block {
+  width: 200px;
+}
+.item__img {
+  width: 100%;
+}
+.item__title {
+  text-transform: uppercase;
+}
+
+button {
+  min-width: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
