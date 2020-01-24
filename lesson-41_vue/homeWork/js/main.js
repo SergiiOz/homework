@@ -66,12 +66,12 @@ var app = new Vue({
             this.sumItem = 0;
             this.cartList = [];
             this.totalPrice = 0;
-            //change isAdded to false
-//             this.list.forEach(itev => {
-//                 if (item.isAdded === true){
-//                     item.isAdded = false;
-//                 }
-//             });
+//             change isAdded to false
+            this.list.forEach(item => {
+                if (item.isAdded === true){
+                    item.isAdded = false;
+                }
+            });
         },
 
         isChangeShowCart: function () {
