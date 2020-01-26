@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homework new component</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- homework -->
+        <select name="" id="">
+
+            <option v-for="(item, index) of items" value="index+1"> {{ item }}
+            </option>
+            <!-- custom-select -->
+            <!-- item=['Ukraine, 'Moldova'] -->
+            <!-- v-on:select=handleCountTrySelect -->
+
+        </select>
+
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+
+        // // new components
+        // Vue.component('custom-select', {
+        //     props: [''],
+        //     data: function () {
+        //         return {
+        //             country: 0,
+        //         }
+        //     },
+        //     methods: {
+        //         handleClick: function () {
+        //             this.countClicked = this.countClicked + 1;
+        //             if (this.countClicked % 3 === 0) {
+        //                 this.$emit('tripleclick');
+        //                 // $emit -  custom event, we can create ourselves
+        //             }
+        //         },
+
+
+        //     },
+        //     template: `
+        //         <button v-on:click="handleClick">
+        //             {{ text }}
+        //         </button>
+        //         `
+        // });
+
+        // vue app
+        var app = new Vue({
+            el: "#app",
+            data: {
+                items: ['Ukraine', 'Poland', 'USA', 'Germany', 'Japan'],
+            },
+            methods: {
+                handleCountTrySelect: function () {
+                    console.log("hello");
+
+                },
+            },
+
+        });
+
+    </script>
+</body>
+
+</html>

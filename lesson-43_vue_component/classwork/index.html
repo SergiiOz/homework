@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #app {
+            width: 400px;
+        }
+
+        .tooltip {
+            display: inline-block;
+            position: relative;
+            font-style: italic;
+        }
+
+        .tooltip-preview {
+            background-color: rgba(54, 124, 22, 0.5);
+            cursor: pointer;
+        }
+
+        /* .tooltip:hover .tooltip-content {
+            display: block;
+        } */
+
+        .tooltip:hover .tooltip-preview {
+            background-color: rgba(75, 173, 30, 0.5);
+        }
+
+        .tooltip-content {
+            position: absolute;
+            /* display: none; */
+            background-color: rgba(196, 57, 57, 1);
+            left: 50%;
+            top: 100%;
+            margin-top: 5px;
+            /* transform: translateX(-50%); */
+            z-index: 2;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="app">Lorem
+
+        ipsum dolor, sit amet consectetur adipisicing elit. Molestiae neque nisi accusantium quas nulla dolores
+        officiis sequi laboriosam sit eius illum corrupti aliquam perferendis quam, ad consectetur voluptatem nesciunt
+        soluta.
+        <!-- tooltipas 1 -->
+        <tooltipas title="#1 lorem azaza or some text" content="Hello, Lorem azaza or popup text."></tooltipas>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, excepturi? Sunt vero, reprehenderit laborum vel
+        nostrum minima amet recusandae iure. Ducimus doloremque voluptates fuga a modi pariatur odit natus aliquam.
+
+        <hr>
+        <!-- tooltipas 2 -->
+        <tooltipas title="#2 click me!!!" content="ZDAROVAAA, zhepa"></tooltipas>
+
+        <hr>
+        <!-- tooltips 3 -->
+        <tooltipas v-bind:title="message" v-bind:content="description"></tooltipas>
+        <br>
+
+        <!-- send value from input to vue -->
+        <input v-model="message" type="text">
+        <br>
+        <input v-model="description" type="text">
+
+        <hr>
+        <!-- ===================================================== -->
+        <!-- task-03 Supper-button triple click-->
+        <super-button v-on:tripleclick="handleTriple" text="click me three times">
+        </super-button>
+
+        <hr>
+        <!-- ===================================================== -->
+        <!-- homework -->
+        <select name="" id="" v-on:change="handleCountTrySelect">
+
+            <!-- custom-select -->
+            <!-- item=['Ukraine, 'Moldova'] -->
+            <!-- v-on:select=handleCountTrySelect -->
+
+            <option value="1">ukr</option>
+            <option value="2">rus</option>
+            <option value="3">usa</option>
+        </select>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+
+        // =============================================
+        // task-03 Super button, tripple click
+        Vue.component('super-button', {
+            props: ['text'],
+            data: function () {
+                return {
+                    countClicked: 0,
+                }
+            },
+            methods: {
+                handleClick: function () {
+                    this.countClicked = this.countClicked + 1;
+                    if (this.countClicked % 3 === 0) {
+                        this.$emit('tripleclick');
+                        // $emit -  custom event, we can create ourselves
+                    }
+                },
+
+
+            },
+            template: `
+                <button v-on:click="handleClick">
+                    {{ text }}
+                </button>
+                `
+        });
+
+
+        // =============================================
+        Vue.component('tooltipas', {
+            props: ['title', 'content'],
+            data: function () {
+                return {
+                    isTooltipVisible: false,
+                }
+            },
+            methods: {
+                toggleTooltip: function () {
+                    this.isTooltipVisible = !this.isTooltipVisible;
+                }
+            },
+            template: `
+            <span class="tooltip">
+                <span class="tooltip-preview" v-on:click="toggleTooltip">{{ title }}</span>
+                <span class="tooltip-content" v-if="isTooltipVisible">{{ content }}</span>
+            </span>
+            `
+        });
+
+        // =============================================
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isTooltipVisible: false,
+                message: '#3 Our message',
+                description: "#3 popup description",
+            },
+            methods: {
+                handleTriple: function () {
+                    console.log("TRIPLE click DONE");
+                },
+
+                handleCountTrySelect: function () {
+                    console.log("select country");
+                }
+            },
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
