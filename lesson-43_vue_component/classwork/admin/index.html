@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div id="app">
+
+
+            <!-- CREATE -->
+            <div v-show="!isShowList" class="section">
+
+                <h1>CREATE LIST</h1>
+
+                <input v-model="newProduct.title" type="text" placeholder="title">
+                <input v-model="newProduct.price" type="number" placeholder="price">
+                <input v-model="newProduct.description" type="text" placeholder="description">
+                <input v-model="newProduct.image" type="text" placeholder="image URL">
+
+                <button v-on:click="addItemsToList">ADD</button>
+
+
+            </div>
+
+
+            <!-- LIST -->
+            <div v-show="!isShowList" class="section">
+
+                <h1>LIST</h1>
+
+                <div v-for="item of list">
+                    <div class="item">
+                        {{ item.title }}
+                        <!-- bind image to src -->
+                        <img v-bind:src="item.image" alt="img">
+                        {{ item.description }}
+                        {{ item.price }}
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
