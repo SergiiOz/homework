@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Form</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <form v-on:submit.prevent="checkUser" action="">
+            <input v-model="user.email" type="text" placeholder="username">
+            <p v-if="!isCorrect.email">error: invalid user email</p>
+
+            <input v-model="user.password" type="password" placeholder="password">
+            <p v-if="!isCorrect.password">error: invalid user password</p>
+
+            <!-- <p>{{ status }}</p>
+            <p>{{ message }}</p> -->
+
+            <input type="submit">
+
+        </form>
+
+
+
+        <div>{{ user.email }}</div>
+        <div>{{ user.password }}</div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+
+        let rightAcount = {
+            email: 'gogi@gmail.com',
+            password: '123',
+        }
+
+
+        //Vue framework
+        var app = new Vue({
+
+            el: '#app',
+            data: {
+
+
+                user: {
+                    email: '',
+                    password: '',
+                },
+
+                isCorrect: {
+                    email: true,
+                    password: true,
+                }
+
+                // status: '',
+                // message: '',
+
+
+            },
+
+            methods: {
+
+                checkUser: function () {
+
+                    if (this.user.email === rightAcount.email && this.user.password === rightAcount.password) {
+                        this.isCorrect.email = true;
+                        this.isCorrect.password = true;
+                        console.log(`email && passpord: ${this.isCorrect}`);
+                    }
+
+                    if (this.user.email !== rightAcount.email) {
+                        this.isCorrect.email === false;
+                        console.log(`email: ${this.isCorrect.email}`);
+                    }
+
+                    if (this.user.password !== rightAcount.password) {
+                        this.isCorrect.password = false;
+                        console.log(`password: ${this.isCorrect.password}`);
+                    }
+
+                },
+                //gogi@example
+                // 123
+                // submit: function () {
+                //     axios
+                //         .post('http://100.64.3.29:9001/login', {
+                //             email: this.user.email,
+                //             password: this.user.password,
+                //         })
+
+                //         .then(function (response) {
+                //             console.log(response.data);
+                //             app.status = response.data.status;
+                //             app.message = response.data.message;
+                //         });
+                // }
+
+            },
+
+
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
