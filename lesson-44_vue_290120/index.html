@@ -8,28 +8,82 @@
     <title>Vue Form</title>
 </head>
 
+<style>
+    .item__register {
+        background-color: lightgreen;
+        padding: 10px;
+    }
+
+    .item__login {
+        background-color: lightblue;
+        padding: 10px;
+    }
+
+    .item__photo {
+        margin-top: 50px;
+    }
+</style>
+
 <body>
 
     <div id="app">
 
-        <form v-on:submit.prevent="checkUser" action="">
-            <input v-model="user.email" type="text" placeholder="username">
-            <p v-if="!isCorrect.email">error: invalid user email</p>
+        <button v-on:click="toRegister">REGISTER</button>
+        <button v-on:click="toLogin">LOGIN</button>
+        <button v-on:click="getCat">CAT</button>
 
-            <input v-model="user.password" type="password" placeholder="password">
-            <p v-if="!isCorrect.password">error: invalid user password</p>
+        <!-- REGISTER FORM -->
+        <div class="item__register" v-show="isShow">
 
-            <!-- <p>{{ status }}</p>
-            <p>{{ message }}</p> -->
+            <h1 class="item__title">REGISTER</h1>
 
-            <input type="submit">
+            <form v-on:submit.prevent="submitRegisterForm" action="">
+                <input v-model="user.email" type="text" placeholder="username">
+                <p v-if="!isCorrect.email">error: invalid user email</p>
 
-        </form>
+                <input v-model="user.password" type="password" placeholder="password">
+                <p v-if="!isCorrect.password">error: invalid user password</p>
+
+                <!-- <p>{{ status }}</p>
+                <p>{{ message }}</p> -->
+
+                <input type="submit">
+
+            </form>
+
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div class="item__login" v-show="!isShow">
+
+            <h1 class="item__title">LOGIN</h1>
+
+            <form v-on:submit.prevent="submitLoginForm" action="">
+                <input v-model="user.email" type="text" placeholder="username">
+                <p v-if="!isCorrect.email">error: invalid user email</p>
+
+                <input v-model="user.password" type="password" placeholder="password">
+                <p v-if="!isCorrect.password">error: invalid user password</p>
+
+                <!-- <p>{{ status }}</p>
+                <p>{{ message }}</p> -->
+
+                <input type="submit">
+
+            </form>
+        </div>
+
+        <!-- SHOW CAT -->
+        <div class="item__photo">
+            <img v-bind:src="catURL" alt="">
+        </div>
 
 
-
+        <!-- 
         <div>{{ user.email }}</div>
-        <div>{{ user.password }}</div>
+        <div>{{ user.password }}</div> -->
+
+
 
     </div>
 
@@ -38,10 +92,10 @@
 
     <script>
 
-        let rightAcount = {
-            email: 'gogi@gmail.com',
-            password: '123',
-        }
+        // let rightAcount = {
+        //     email: 'gogi@gmail.com',
+        //     password: '123',
+        // }
 
 
         //Vue framework
@@ -59,50 +113,111 @@
                 isCorrect: {
                     email: true,
                     password: true,
-                }
+                },
+
+                isShow: false,
+
+                token: '',
+                catURL: '',
 
                 // status: '',
                 // message: '',
 
+            },
 
+            mounted() {
+                this.token = localStorage.getItem('token');
             },
 
             methods: {
 
-                checkUser: function () {
-
-                    if (this.user.email === rightAcount.email && this.user.password === rightAcount.password) {
-                        this.isCorrect.email = true;
-                        this.isCorrect.password = true;
-                        console.log(`email && passpord: ${this.isCorrect}`);
+                toRegister: function () {
+                    if (this.isShow === false) {
+                        this.isShow = true;
                     }
-
-                    if (this.user.email !== rightAcount.email) {
-                        this.isCorrect.email === false;
-                        console.log(`email: ${this.isCorrect.email}`);
-                    }
-
-                    if (this.user.password !== rightAcount.password) {
-                        this.isCorrect.password = false;
-                        console.log(`password: ${this.isCorrect.password}`);
-                    }
-
                 },
-                //gogi@example
-                // 123
-                // submit: function () {
-                //     axios
-                //         .post('http://100.64.3.29:9001/login', {
-                //             email: this.user.email,
-                //             password: this.user.password,
-                //         })
 
-                //         .then(function (response) {
-                //             console.log(response.data);
-                //             app.status = response.data.status;
-                //             app.message = response.data.message;
-                //         });
-                // }
+                toLogin: function () {
+                    if (this.isShow === true) {
+                        this.isShow = false;
+                    }
+                },
+
+                addTokenToLocalStorage(valueToken) {
+                    localStorage.setItem('token', valueToken);
+                },
+
+
+
+                // checkUser: function () {
+
+                //     if (this.user.email === rightAcount.email && this.user.password === rightAcount.password) {
+                //         this.isCorrect.email = true;
+                //         this.isCorrect.password = true;
+                //         console.log(`email && passpord: ${this.isCorrect}`);
+                //     }
+
+                //     if (this.user.email !== rightAcount.email) {
+                //         this.isCorrect.email === false;
+                //         console.log(`email: ${this.isCorrect.email}`);
+                //     }
+
+                //     if (this.user.password !== rightAcount.password) {
+                //         this.isCorrect.password = false;
+                //         console.log(`password: ${this.isCorrect.password}`);
+                //     }
+
+                // },
+
+                // gogi@example
+                // 123
+                submitLoginForm: function () {
+                    axios
+                        .post('http://100.64.3.29:9001/login', {
+                            email: this.user.email,
+                            password: this.user.password,
+                        })
+
+                        .then((response) => {
+                            console.log(response.data);
+                            app.status = response.data.status;
+                            app.message = response.data.message;
+                            // get token
+                            this.token = response.data.token;
+                            // add token to LocalStorage
+                            this.addTokenToLocalStorage(this.token);
+                            // call function getCat();
+                            this.getCat();
+                        });
+                },
+
+                submitRegisterForm: function () {
+                    axios
+                        .post('http://100.64.3.29:9001/register', {
+                            email: this.user.email,
+                            password: this.user.password,
+                        })
+
+                        .then(function (response) {
+                            console.log(response.data);
+                            app.status = response.data.status;
+                            app.message = response.data.message;
+                        });
+                },
+
+                getCat: function () {
+                    axios
+                        .get(`http://100.64.3.29:9001/cat?token=${app.token}`)
+
+                        .then(function (response) {
+                            console.log(response.data);
+                            app.status = response.data.status;
+                            app.message = response.data.message;
+                            app.catURL = response.data.cat;
+
+                        });
+                }
+
 
             },
 
