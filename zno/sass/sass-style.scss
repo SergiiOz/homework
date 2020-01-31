@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+.page {
+    background-color: #E5E5E5;;
+}
+
 .wrapper {
     max-width: 1470px;
     padding: 0 15px;
@@ -11,6 +15,7 @@
 }
 
 .header__top {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,9 +25,12 @@
 }
 
 .header__bottom {
+    position: relative;
     background-color: #D91F1F;
     min-height: 96px;
-    border: 5px solid #000;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+
 }
 
 .header__items-block {
@@ -50,3 +58,109 @@
     background-color: #464646;
     box-shadow: inset -5px 5px 10px rgba(0, 0, 0, 0.75);
 }
+
+.header__text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.header__title{
+    font-size: 44px;
+}
+
+.header__description {
+    font-size: 15px;
+    color: #000;
+}
+
+
+// grid top
+.lines {
+    position: absolute;
+    z-index: 10;
+    height: 3px;
+    width: 100%;
+    background-color: rgba(20, 16, 16, 0.75);;
+    
+}
+
+.lines--top {
+    // position: absolute;
+    top: 35px;
+    // z-index: 10;
+    // height: 3px;
+    // width: 100%;
+    // background-color: rgba(20, 16, 16, 0.75);;
+    
+}
+
+.lines--top::before {
+    content: '';
+    height: 5px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: -20px;
+    background-color: #141010;
+}
+
+
+.lines--top::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    background-color: rgba(20, 16, 16, 0.5);;
+}
+
+
+
+// grid bottom
+.lines--bottom {
+    // position: absolute;
+    bottom: 35px;
+    // z-index: 10;
+    // height: 3px;
+    // width: 100%;
+    // background-color: rgba(20, 16, 16, 0.75);;
+    
+}
+
+.lines--bottom::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: -15px;
+    background-color: rgba(20, 16, 16, 0.5);;
+}
+
+.lines--bottom::after {
+    content: '';
+    height: 5px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    background-color: #141010;
+}
+
+.section {
+    position: relative;
+    min-height: 500px;
+}
+
+
+
+
+
+
+
+
