@@ -9,8 +9,12 @@
   margin: 0 auto; }
 
 .header__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #E8C512;
-  min-height: 500px; }
+  min-height: 500px;
+  width: 100%; }
 
 .header__bottom {
   background-color: #D91F1F;
@@ -19,7 +23,8 @@
 
 .header__items-block {
   position: relative;
-  margin: 0 auto; }
+  height: 170px;
+  width: 170px; }
 
 .header__item {
   position: absolute;
