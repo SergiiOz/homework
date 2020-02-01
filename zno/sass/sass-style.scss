@@ -19,13 +19,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E8C512;
-    min-height: 500px;
+    // background-color: #E8C512;
+    min-height: 700px;
     width: 100%;
+    background-image: url('../images/img-background-01.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .header__bottom {
     position: relative;
+    display: flex;
+    align-items: center;
     background-color: #D91F1F;
     min-height: 96px;
     border-top: 5px solid #000;
@@ -81,7 +87,7 @@
 
 
 // grid top
-.lines {
+.lines-decor {
     position: absolute;
     z-index: 10;
     height: 3px;
@@ -90,7 +96,7 @@
     
 }
 
-.lines--top {
+.lines-decor--type_01 {
     // position: absolute;
     top: 35px;
     // z-index: 10;
@@ -100,7 +106,7 @@
     
 }
 
-.lines--top::before {
+.lines-decor--type_01::before {
     content: '';
     height: 5px;
     width: 100%;
@@ -111,7 +117,7 @@
 }
 
 
-.lines--top::after {
+.lines-decor--type_01::after {
     content: '';
     height: 1px;
     width: 100%;
@@ -123,7 +129,7 @@
 
 
 // grid bottom
-.lines--bottom {
+.lines-decor--type_02 {
     // position: absolute;
     bottom: 35px;
     // z-index: 10;
@@ -133,7 +139,7 @@
     
 }
 
-.lines--bottom::before {
+.lines-decor--type_02::before {
     content: '';
     height: 1px;
     width: 100%;
@@ -142,7 +148,7 @@
     background-color: rgba(20, 16, 16, 0.5);;
 }
 
-.lines--bottom::after {
+.lines-decor--type_02::after {
     content: '';
     height: 5px;
     width: 100%;
@@ -155,6 +161,39 @@
 .section {
     position: relative;
     min-height: 500px;
+}
+
+
+.header__img-block-01 {
+    position: absolute;
+    display: block;
+    bottom: -5px;
+    left: 0;
+    max-width: 350px;
+}
+
+.header__img-block-02 {
+    position: absolute;
+    bottom: -5px;
+    right: 280px;
+    max-width: 304px;
+}
+
+.header__img-block-03 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 314px;
+}
+
+.image {
+    width: 100%;
+}
+
+.slogan {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 
