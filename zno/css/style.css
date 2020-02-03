@@ -201,7 +201,8 @@
   bottom: 0;
   left: 0;
   max-width: 387px;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  cursor: pointer; }
 
 .paddingBtn-left {
   display: block;
@@ -216,7 +217,8 @@
   bottom: 0;
   right: 0;
   max-width: 387px;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  cursor: pointer; }
 
 .paddingBtn-center {
   display: block;
@@ -231,7 +233,8 @@
   bottom: 0;
   left: 0;
   max-width: 400px;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  cursor: pointer; }
 
 .button-center:hover {
   transform: translateY(-10px); }
