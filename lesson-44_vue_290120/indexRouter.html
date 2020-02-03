@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue router</title>
+</head>
+
+<style>
+    .item__register {
+        background-color: lightgreen;
+        padding: 10px;
+    }
+
+    .item__login {
+        background-color: lightblue;
+        padding: 10px;
+    }
+
+    .item__photo {
+        margin-top: 50px;
+        max-width: 200px;
+    }
+
+    .photo {
+        width: 100%;
+    }
+</style>
+
+<body>
+
+
+    <!-- join Vue -->
+    <div id="app">
+
+
+        <router-link to="/login">LOGIN</router-link>
+        <router-link to="/register">REGISTER</router-link>
+        <router-link to="/cat">CAT</router-link>
+
+        <!-- view -->
+        <router-view></router-view>
+
+    </div>
+
+    <!-- vue connect -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- axios connect -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- router connect  -->
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <script>
+
+        // Create components CapPage, LoginPage, RegisterPage
+
+        // CAT Page components
+        const CatPage = {
+            data: function () {
+                return {
+                    catURL: '',
+                    token: '',
+                }
+            },
+
+            mounted() {
+                this.token = localStorage.getItem('token');
+                this.getCat();
+            },
+
+            methods: {
+                getCat: function () {
+                    axios
+                        .get(`http://46.101.202.248:9001/cat?token=${this.token}`)
+
+                        .then((response) => {
+                            console.log(response.data);
+                            this.status = response.data.status;
+                            this.message = response.data.message;
+                            this.catURL = response.data.cat;
+
+                        });
+                },
+
+            },
+
+            template: `
+                <div>
+                    <!-- SHOW CAT -->
+
+                    <h1>Cat's photo</h1>
+                    <div class="item__photo">
+                        <img class="photo" v-bind:src="catURL" alt="">
+                    </div>
+                </div>
+            `
+        }
+
+        // LOGIN page components
+        const LoginPage = {
+            data: function () {
+                return {
+                    user: {
+                        email: '',
+                        password: '',
+                    }
+                }
+
+            },
+
+            methods: {
+                //conntect this method to form 'login'
+                submitLoginForm: function () {
+                    axios
+                        .post(' http://46.101.202.248:9001/login', {
+                            email: this.user.email,
+                            password: this.user.password,
+                        })
+
+                        .then((response) => {
+                            console.log(response.data);
+                            this.status = response.data.status;
+                            this.message = response.data.message;
+                            // get token
+                            this.token = response.data.token;
+                            // add token to LocalStorage
+                            this.addTokenToLocalStorage(this.token);
+                            // redirect to cat page
+                            this.$router.push('/cat');
+                        });
+                },
+
+                addTokenToLocalStorage(valueToken) {
+                    localStorage.setItem('token', valueToken);
+                },
+            },
+
+            template:
+
+                `<div>
+                    <!-- LOGIN FORM -->
+                    
+                    <div class="item__login">
+                        <h1 class="item__title">LOGIN</h1>
+
+                        <form v-on:submit.prevent="submitLoginForm" action="">
+                            <input v-model="user.email" type="text" placeholder="username">
+
+                            <input v-model="user.password" type="password" placeholder="password">
+
+                            <input type="submit">
+
+                        </form>
+                    
+                    </div>       
+
+                </div>`,
+        }
+
+        // REGISTER page components
+        const RegisterPage = {
+            data: function () {
+                return {
+                    user: {
+                        email: '',
+                        password: '',
+                    }
+                }
+            },
+
+            methods: {
+                submitRegisterForm: function () {
+                    axios
+                        .post('http://46.101.202.248:9001/register', {
+                            email: this.user.email,
+                            password: this.user.password,
+                        })
+
+                        .then((response) => {
+                            console.log(response.data);
+                            this.status = response.data.status;
+                            this.message = response.data.message;
+                        });
+                },
+
+            },
+
+            template:
+
+                `<div>
+                    <!-- REGISTER FORM -->
+
+                    <div class="item__register">                        
+                        <h1 class="item__title">REGISTER</h1>   
+    
+                        <form v-on:submit.prevent="submitRegisterForm" action="">
+                            <input v-model="user.email" type="text" placeholder="username">
+                       
+                            <input v-model="user.password" type="password" placeholder="password">
+                        
+                            <input type="submit">
+    
+                        </form>
+                    </div>
+                    
+                </div>`,
+        }
+
+
+
+        // 2. Определяем несколько маршрутов
+        // Каждый маршрут должен указывать на компонент.
+
+        const routes = [
+            //example: '/login' set to HTML <router-link to="/login">LOGIN</router-link>
+            { path: '/login', component: LoginPage },
+            { path: '/register', component: RegisterPage },
+            { path: '/cat', component: CatPage },
+        ]
+
+        // 3. Создаём экземпляр маршрутизатора и передаём маршруты в опции `routes`
+        const router = new VueRouter({
+            routes // сокращённая запись для `routes: routes`
+        })
+
+
+        const app = new Vue({
+            router
+        }).$mount('#app')
+
+    </script>
+
+
+</body>
+
+</html>
