@@ -19,13 +19,27 @@
         padding: 10px;
     }
 
-    .item__photo {
-        margin-top: 50px;
-        max-width: 200px;
+
+    .item__block {
+        display: flex;
+        /* max-width: 500px; */
+    }
+
+    .item__picture {
+        max-width: 300px;
+    }
+
+    .item__description {
+        width: 50%;
+        padding-left: 30px;
     }
 
     .photo {
         width: 100%;
+    }
+
+    .picture {
+        max-width: 100px;
     }
 </style>
 
@@ -38,7 +52,9 @@
 
         <router-link to="/login">LOGIN</router-link>
         <router-link to="/register">REGISTER</router-link>
-        <router-link to="/cat">CAT</router-link>
+        <router-link to="/cats">CATS</router-link>
+        <!-- redirect to /login page -->
+        <button v-on:click="logOut">Log out</button>
 
         <!-- view -->
         <router-view></router-view>
@@ -56,30 +72,29 @@
 
         // Create components CapPage, LoginPage, RegisterPage
 
-        // CAT Page components
-        const CatPage = {
+        // CATS Page components
+        const CatDetails = {
             data: function () {
                 return {
-                    catURL: '',
                     token: '',
+                    cat: {},
                 }
             },
 
             mounted() {
                 this.token = localStorage.getItem('token');
-                this.getCat();
+                this.getCatDetails();
             },
 
             methods: {
-                getCat: function () {
+                getCatDetails: function () {
                     axios
-                        .get(`http://46.101.202.248:9001/cat?token=${this.token}`)
+                        .get(`http://46.101.202.248:9001/cats/${this.$route.params.id}?token=${this.token}`)
 
                         .then((response) => {
                             console.log(response.data);
-                            this.status = response.data.status;
-                            this.message = response.data.message;
-                            this.catURL = response.data.cat;
+
+                            this.cat = response.data;
 
                         });
                 },
@@ -89,11 +104,83 @@
             template: `
                 <div>
                     <!-- SHOW CAT -->
+                    <h1>Cat details</h1>
+                        <li>
+                            
+                            <div class = item__block>
+                                <div class="item__picture">
+                                    <img class="photo" v-bind:src="cat.picture" alt="picture cat">
+                                </div>
+                            
+                                <div class="item__description">
+                                    <div> {{ cat.description }} </div>    
+                                    <div> <b>Favorite cat's color:</b> {{ cat.color }} </div>
+                                </div>
+                            </div>
 
+                            
+                        </li>
+                    </ul>
+                    
+                </div>
+            `
+        }
+
+
+
+        // CATS List Page components
+        const CatsListPage = {
+            data: function () {
+                return {
+
+                    token: '',
+                    cats: [],
+
+                }
+            },
+
+            mounted() {
+                this.token = localStorage.getItem('token');
+                this.getCatsList();
+            },
+
+            methods: {
+                getCatsList: function () {
+                    axios
+                        .get(`http://46.101.202.248:9001/cats?token=${this.token}`)
+
+                        .then((response) => {
+                            console.log(response.data);
+                            this.status = response.data.status;
+                            this.message = response.data.message;
+
+                            //    get array cats
+                            this.cats = response.data;
+                            console.log(response.data);
+
+                        });
+                },
+
+            },
+
+            template: `
+                <div>
+                    <!-- SHOW CAT -->
                     <h1>Cat's photo</h1>
-                    <div class="item__photo">
-                        <img class="photo" v-bind:src="catURL" alt="">
-                    </div>
+                    <ul v-for="(cat, index) of cats ">
+                        <li>
+                            {{ index + 1 }}
+
+                            <span class="picture">
+                                <img v-bind:src="cat.picture" alt="picture cat">
+                            </span>
+
+                            <!-- create link to singe cat, it has id -->
+                            <router-link v-bind:to="'/cats/' + cat.id">{{ cat.name }}</router-link>
+
+                        </li>
+                    </ul>
+                    
                 </div>
             `
         }
@@ -127,8 +214,8 @@
                             this.token = response.data.token;
                             // add token to LocalStorage
                             this.addTokenToLocalStorage(this.token);
-                            // redirect to cat page
-                            this.$router.push('/cat');
+                            // redirect to cats page (CatsListPage)
+                            this.$router.push('/cats');
                         });
                 },
 
@@ -146,6 +233,7 @@
                         <h1 class="item__title">LOGIN</h1>
 
                         <form v-on:submit.prevent="submitLoginForm" action="">
+
                             <input v-model="user.email" type="text" placeholder="username">
 
                             <input v-model="user.password" type="password" placeholder="password">
@@ -217,7 +305,8 @@
             //example: '/login' set to HTML <router-link to="/login">LOGIN</router-link>
             { path: '/login', component: LoginPage },
             { path: '/register', component: RegisterPage },
-            { path: '/cat', component: CatPage },
+            { path: '/cats', component: CatsListPage },
+            { path: '/cats/:id', component: CatDetails }
         ]
 
         // 3. Создаём экземпляр маршрутизатора и передаём маршруты в опции `routes`
@@ -227,7 +316,13 @@
 
 
         const app = new Vue({
-            router
+            router,
+            methods: {
+                logOut: function () {
+                    localStorage.removeItem('token');
+                    this.$router.push('/login');
+                }
+            }
         }).$mount('#app')
 
     </script>
