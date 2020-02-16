@@ -1,7 +1,36 @@
+@font-face {
+  font-family: "Druk Text Wide Regular";
+  src: url("../fonts/Druk-Text-Wide-Regular/Druk-Text-Wide-Regular.eot");
+  src: url("../fonts/Druk-Text-Wide-Regular/Druk-Text-Wide-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Druk-Text-Wide-Regular/Druk-Text-Wide-Regular.woff2") format("woff2"), url("../fonts/Druk-Text-Wide-Regular/Druk-Text-Wide-Regular.woff") format("woff"), url("../fonts/Druk-Text-Wide-Regular/Druk-Text-Wide-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Druk Text Wide Bold";
+  src: url("../fonts/Druk-Text-Wide/DrukTextWide-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Druk Text Wide Heavy";
+  src: url("../fonts/Druk-Text-Wide/DrukTextWide-Heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Codac Pro Regular";
+  src: url("../fonts/codec-pro-cufonfonts/CodecPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.mark {
+  color: #D91F1F;
 }
 
 .page {
@@ -9,7 +38,7 @@
 }
 
 .wrapper {
-  max-width: 1470px;
+  max-width: 1600px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -87,12 +116,14 @@
 }
 
 .header__title {
+  font-family: "Druk Text Wide Regular";
   font-size: 44px;
 }
 
 .header__description {
   font-size: 15px;
   color: #000;
+  font-family: "Druk Text Wide Bold";
 }
 
 .lines-decor {
@@ -201,6 +232,7 @@
 }
 
 .slogan {
+  font-family: "Druk Text Wide Heavy";
   font-size: 24px;
   text-transform: uppercase;
   color: #fff;
@@ -221,6 +253,7 @@
 }
 
 .section__text-block {
+  font-family: "Druk Text Wide Bold";
   text-transform: uppercase;
   text-align: center;
 }
@@ -228,13 +261,11 @@
 .section__title {
   font-size: 72px;
   color: #E8C512;
-  text-shadow: 2px 0 0 #D91F1F, -2px 0 0 #D91F1F, 0 2px 0 #D91F1F, 0 -2px 0 #D91F1F, 1px 1px 0 #D91F1F, -1px -1px 0 #D91F1F, 1px -1px 0 #D91F1F, -1px 1px 0 #D91F1F, 1px 1px 5px #D91F1F;
 }
 
 .section__motto {
   font-size: 36px;
   color: #D91F1F;
-  text-shadow: 1px 0 0 #E8C512, -1px 0 0 #E8C512, 0 1px 0 #E8C512, 0 -1px 0 #E8C512, 1px 1px 0 #E8C512, -1px -1px 0 #E8C512, 1px -1px 0 #E8C512, -1px 1px 0 #E8C512, 1px 1px 3px #E8C512;
 }
 
 .list__images {
@@ -316,6 +347,20 @@
   transition: all 0.5s;
   text-transform: uppercase;
   text-align: center;
+}
+
+.button__title {
+  font-family: "Druk Text Wide Heavy";
+  color: #FFD703;
+}
+
+.button__title--mod_1 {
+  color: #BA3D21;
+}
+
+.button__description {
+  margin-top: 5px;
+  font-family: "Codac Pro Regular";
 }
 
 .paddingBtn-center {
@@ -530,6 +575,8 @@
 }
 
 .item__description {
+  font-family: "Druk Text Wide Heavy";
+  font-size: 16px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

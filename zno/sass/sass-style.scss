@@ -1,15 +1,27 @@
+@import './fonts';
+
+$font-primary-regular: 'Druk Text Wide Regular';
+$font-primary-bold: 'Druk Text Wide Bold';
+$font-primary-heavy: 'Druk Text Wide Heavy';
+$font-secondary-regular: 'Codac Pro Regular';
+
+
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+.mark {
+    color: #D91F1F;
+}
 .page {
     background-color: #E5E5E5;;
 }
 
 .wrapper {
-    max-width: 1470px;
+    max-width: 1600px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -93,12 +105,14 @@
 }
 
 .header__title{
+    font-family: $font-primary-regular;
     font-size: 44px;
 }
 
 .header__description {
     font-size: 15px;
     color: #000;
+    font-family: $font-primary-bold;
 }
 
 
@@ -182,7 +196,7 @@
     display: block;
     position: absolute;
     top: -20px;
-    background-color: #E8C512;;
+    background-color: #E8C512;
 }
 
 
@@ -192,7 +206,7 @@
     width: 100%;
     position: absolute;
     bottom: -15px;
-    background-color: #E8C512;;
+    background-color: #E8C512;
 }
 
 
@@ -228,6 +242,7 @@
 }
 
 .slogan {
+    font-family: $font-primary-heavy;
     font-size: 24px;
     text-transform: uppercase;
     color: #fff;
@@ -252,25 +267,26 @@
 }
 
 .section__text-block {
+    font-family: $font-primary-bold;
     text-transform: uppercase;
     text-align: center;
 
 }
 
 .section__title{
+
     font-size: 72px;
     color: #E8C512;
-    //border: 2px solid #D91F1F;
-    text-shadow: 
-    2px   0  0  #D91F1F, 
-   -2px   0  0  #D91F1F, 
-    0    2px 0  #D91F1F, 
-    0   -2px 0  #D91F1F, 
-    1px  1px 0  #D91F1F, 
-   -1px -1px 0  #D91F1F, 
-    1px -1px 0  #D91F1F, 
-   -1px  1px 0  #D91F1F,
-    1px  1px 5px #D91F1F;
+//     text-shadow: 
+//     2px   0  0  #D91F1F, 
+//    -2px   0  0  #D91F1F, 
+//     0    2px 0  #D91F1F, 
+//     0   -2px 0  #D91F1F, 
+//     1px  1px 0  #D91F1F, 
+//    -1px -1px 0  #D91F1F, 
+//     1px -1px 0  #D91F1F, 
+//    -1px  1px 0  #D91F1F,
+//     1px  1px 5px #D91F1F;
 }
 
 
@@ -279,16 +295,16 @@
     font-size: 36px;
     color: #D91F1F;
     // border: 1px solid #E8C512;
-    text-shadow: 
-    1px   0  0  #E8C512, 
-   -1px   0  0  #E8C512, 
-    0    1px 0  #E8C512, 
-    0   -1px 0  #E8C512, 
-    1px  1px 0  #E8C512, 
-   -1px -1px 0  #E8C512, 
-    1px -1px 0  #E8C512, 
-   -1px  1px 0  #E8C512,
-    1px  1px 3px #E8C512;
+//     text-shadow: 
+//     1px   0  0  #E8C512, 
+//    -1px   0  0  #E8C512, 
+//     0    1px 0  #E8C512, 
+//     0   -1px 0  #E8C512, 
+//     1px  1px 0  #E8C512, 
+//    -1px -1px 0  #E8C512, 
+//     1px -1px 0  #E8C512, 
+//    -1px  1px 0  #E8C512,
+//     1px  1px 3px #E8C512;
 }
 
 
@@ -372,6 +388,20 @@
     transition: all 0.5s;
     text-transform: uppercase;
     text-align: center;
+}
+
+.button__title {
+    font-family: $font-primary-heavy;
+    color: #FFD703;
+}
+
+.button__title--mod_1 {
+    color: #BA3D21;
+}
+
+.button__description{
+    margin-top: 5px;
+    font-family: $font-secondary-regular;
 }
 
 
@@ -595,6 +625,8 @@
     }
 
 .item__description {
+    font-family: $font-primary-heavy;
+    font-size: 16px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
