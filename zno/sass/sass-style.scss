@@ -314,6 +314,13 @@ $font-secondary-regular: 'Codac Pro Regular';
     height: 220px;
 }
 
+//modifier
+.list__images--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .paddingBtn-right {
     display: block;
     position: absolute;
@@ -355,7 +362,7 @@ $font-secondary-regular: 'Codac Pro Regular';
     display: block;
     position: absolute;
     bottom: 50px;
-    right: 40px;
+    right: 30px;
     max-width: 387px;
     transition: all 0.5s;
     cursor: pointer;
@@ -368,7 +375,7 @@ $font-secondary-regular: 'Codac Pro Regular';
     display: block;
     position: absolute;
     bottom: 50px;
-    left: 40px;
+    left: 30px;
     max-width: 387px;
     transition: all 0.5s;
     cursor: pointer;
@@ -380,8 +387,6 @@ $font-secondary-regular: 'Codac Pro Regular';
 .button__text-block-center {
     display: block;
     position: absolute;
-    bottom: 60px;
-    left: 120px;
     max-width: 387px;
     transition: all 0.5s;
     cursor: pointer;
@@ -391,7 +396,8 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 .button__title {
-    font-family: $font-primary-heavy;
+    font-family: $font-primary-regular;
+    font-size: 18px;
     color: #FFD703;
 }
 
@@ -402,16 +408,21 @@ $font-secondary-regular: 'Codac Pro Regular';
 .button__description{
     margin-top: 5px;
     font-family: $font-secondary-regular;
+    font-size: 14px;
+    color: #FFD703;
+}
+
+.button__description--mod_1 {
+    color: #BA3D21;
 }
 
 
 
-// center
+// center button
 .paddingBtn-center {
     display: block;
     position: absolute;
     bottom: 0%;
-    left: 3px;
     max-width: 400px;
 }
 
@@ -419,7 +430,6 @@ $font-secondary-regular: 'Codac Pro Regular';
     display: block;
     position: absolute;
     bottom: 0;
-    left: 0;
     max-width: 400px;
     transition: all 0.5s;
     cursor: pointer;
@@ -604,6 +614,8 @@ $font-secondary-regular: 'Codac Pro Regular';
 
 .item__step {
     position: relative;
+    display: flex;
+    align-items: center;
     max-width: 485px;
     margin-bottom: 42px;
     text-transform: uppercase;
@@ -628,8 +640,6 @@ $font-secondary-regular: 'Codac Pro Regular';
     font-family: $font-primary-heavy;
     font-size: 16px;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     padding-left: 40px;
 }
 
@@ -641,8 +651,34 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 
+//CAROUSEL
+.section__carousel {
+    padding-top: 100px;
+    min-height: 500px;
+    background-color: #E8C512;
+}
 
 
+.slider {
+
+    &__item {
+        padding-bottom: 30px;
+    }
+    
+
+    &__cube {
+        // position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image-block {
+        display: block;
+        padding: 0 5px;
+        max-width: 240px;
+        bottom: 0;
+    }
+}
 
 
 

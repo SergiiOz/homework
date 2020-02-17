@@ -274,6 +274,12 @@
   height: 220px;
 }
 
+.list__images--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .paddingBtn-right {
   display: block;
   position: absolute;
@@ -314,7 +320,7 @@
   display: block;
   position: absolute;
   bottom: 50px;
-  right: 40px;
+  right: 30px;
   max-width: 387px;
   transition: all 0.5s;
   cursor: pointer;
@@ -327,7 +333,7 @@
   display: block;
   position: absolute;
   bottom: 50px;
-  left: 40px;
+  left: 30px;
   max-width: 387px;
   transition: all 0.5s;
   cursor: pointer;
@@ -339,8 +345,6 @@
 .button__text-block-center {
   display: block;
   position: absolute;
-  bottom: 60px;
-  left: 120px;
   max-width: 387px;
   transition: all 0.5s;
   cursor: pointer;
@@ -350,7 +354,8 @@
 }
 
 .button__title {
-  font-family: "Druk Text Wide Heavy";
+  font-family: "Druk Text Wide Regular";
+  font-size: 18px;
   color: #FFD703;
 }
 
@@ -361,13 +366,18 @@
 .button__description {
   margin-top: 5px;
   font-family: "Codac Pro Regular";
+  font-size: 14px;
+  color: #FFD703;
+}
+
+.button__description--mod_1 {
+  color: #BA3D21;
 }
 
 .paddingBtn-center {
   display: block;
   position: absolute;
   bottom: 0%;
-  left: 3px;
   max-width: 400px;
 }
 
@@ -375,7 +385,6 @@
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
   max-width: 400px;
   transition: all 0.5s;
   cursor: pointer;
@@ -555,6 +564,8 @@
 
 .item__step {
   position: relative;
+  display: flex;
+  align-items: center;
   max-width: 485px;
   margin-bottom: 42px;
   text-transform: uppercase;
@@ -578,8 +589,6 @@
   font-family: "Druk Text Wide Heavy";
   font-size: 16px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   padding-left: 40px;
 }
 
@@ -588,6 +597,26 @@
   bottom: -5px;
   right: 0;
   max-width: 200px;
+}
+
+.section__carousel {
+  padding-top: 100px;
+  min-height: 500px;
+  background-color: #E8C512;
+}
+
+.slider__item {
+  padding-bottom: 30px;
+}
+.slider__cube {
+  display: flex;
+  justify-content: center;
+}
+.slider__image-block {
+  display: block;
+  padding: 0 5px;
+  max-width: 240px;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
