@@ -16,6 +16,10 @@ $font-secondary-regular: 'Codac Pro Regular';
 .mark {
     color: #D91F1F;
 }
+
+.mark-02 {
+    color: #E8C512;
+}
 .page {
     background-color: #E5E5E5;;
 }
@@ -490,11 +494,18 @@ $font-secondary-regular: 'Codac Pro Regular';
     // min-height: 110px;
 }
 
+.section--04 {
+    background-color: #BA3D21;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+
 .section__slogan-block {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 42px 15px;
+
 }
 
 .section__slogan {
@@ -653,7 +664,7 @@ $font-secondary-regular: 'Codac Pro Regular';
 
 //CAROUSEL
 .section__carousel {
-    padding-top: 100px;
+    padding: 100px 0;
     min-height: 500px;
     background-color: #E8C512;
 }
@@ -679,6 +690,68 @@ $font-secondary-regular: 'Codac Pro Regular';
         bottom: 0;
     }
 }
+
+.slider__cube {
+    position: relative;
+}
+
+.slider__image-block--show {
+    position: absolute;
+    z-index: -1;
+}
+
+.slider__cube:hover .slider__image-block--show {
+    z-index: 2;
+}
+
+
+.section__button-block {
+    // background-color: green;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.button-block__inner{
+    display: flex;
+    flex-direction: row;
+}
+.button-small,
+.button-small-padding {
+    max-width: 265px;
+    transition: 0.5s all;
+}
+
+.button-long,
+.button-long-padding {
+    display: block;
+    width: 400px;
+    transition: 0.5s all;
+}
+
+.button-block__item{
+    position: relative;
+    padding: 0 30px;
+}
+
+.button-small,
+.button-long {
+    position: absolute;
+    top:0;
+}
+
+.button-long:hover {
+    transform: translate(10px, 10px);
+}
+
+.button-small:hover {
+    transform: translate(10px, 10px);
+}
+
+
+
+
+
 
 
 

@@ -6,6 +6,7 @@ $(document).ready(function () {
         slidesToShow: 5,
         slidesToScroll: 1,
         dots: true,
+        arrows: false,
         // prevArrow: $('.btn-icon-arrow__slider-prev'), //use my custom icon
         // nextArrow: $('.btn-icon-arrow__slider-next'), //use my custom icom
 
