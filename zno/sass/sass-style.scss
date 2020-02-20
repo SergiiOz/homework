@@ -6,13 +6,11 @@ $font-primary-heavy: 'Druk Text Wide Heavy';
 $font-secondary-regular: 'Codac Pro Regular';
 
 
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 
 
 .mark {
@@ -266,46 +264,25 @@ $font-secondary-regular: 'Codac Pro Regular';
     
         font-size: 72px;
         color: #E8C512;
-    //     text-shadow: 
-    //     2px   0  0  #D91F1F, 
-    //    -2px   0  0  #D91F1F, 
-    //     0    2px 0  #D91F1F, 
-    //     0   -2px 0  #D91F1F, 
-    //     1px  1px 0  #D91F1F, 
-    //    -1px -1px 0  #D91F1F, 
-    //     1px -1px 0  #D91F1F, 
-    //    -1px  1px 0  #D91F1F,
-    //     1px  1px 5px #D91F1F;
-    }
-    
-    
+    }  
     
     &__motto{
         font-size: 36px;
         color: #D91F1F;
-        // border: 1px solid #E8C512;
-    //     text-shadow: 
-    //     1px   0  0  #E8C512, 
-    //    -1px   0  0  #E8C512, 
-    //     0    1px 0  #E8C512, 
-    //     0   -1px 0  #E8C512, 
-    //     1px  1px 0  #E8C512, 
-    //    -1px -1px 0  #E8C512, 
-    //     1px -1px 0  #E8C512, 
-    //    -1px  1px 0  #E8C512,
-    //     1px  1px 3px #E8C512;
-}
+    }
+
+
+    &--01{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 1200px;
+        background-image: url(../images/img-background-02.png);
+        background-position: center;
+    }
 }
 
-.section--01{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 1200px;
-    background-image: url(../images/img-background-02.png);
-    background-position: center;
-}
 
 
 
@@ -346,69 +323,52 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 
-.button-right {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    max-width: 387px;
-    transition: all 0.5s;
-    cursor: pointer;
-
-}
-
-
-.button-left {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    max-width: 387px;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-
+//BUTTONS
 .button {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    max-width: 387px;
+    transition: all 0.5s;
+    cursor: pointer;
+    
+    //button center
+    &--center {
+        max-width: 400px;
+    }
+    
+    //block buttons position right side
+    &--right {
+        left: 0;     
+    }
+    
+    //block buttons position left side
+    &--left {
+        right: 0;
+    }
 
     //text block on buttons
-    &__text-block-left {
-        display: block;
+    &__text-block {
         position: absolute;
-        bottom: 50px;
-        right: 30px;
-        max-width: 387px;
-        transition: all 0.5s;
-        cursor: pointer;
-        transition: all 0.5s;
+        display: block;
+        max-width: 200px;
         text-transform: uppercase;
         text-align: center;
-    }
-    
-    &__text-block-right {
-        display: block;
-        position: absolute;
-        bottom: 50px;
-        left: 30px;
-        max-width: 387px;
-        transition: all 0.5s;
         cursor: pointer;
         transition: all 0.5s;
-        text-transform: uppercase;
-        text-align: center;
+        
+        &--left {
+            bottom: 50px;
+            right: 30px;
+        }
+
+        &--right {
+            bottom: 50px;
+            left: 30px;
+        }
     }
 
-    &__text-block-center {
-        display: block;
-        position: absolute;
-        max-width: 387px;
-        transition: all 0.5s;
-        cursor: pointer;
-        transition: all 0.5s;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    
+    //title buttons
     &__title {
         font-family: $font-primary-regular;
         font-size: 18px;
@@ -419,6 +379,7 @@ $font-secondary-regular: 'Codac Pro Regular';
         }
     }
     
+
     &__description{
         margin-top: 5px;
         font-family: $font-secondary-regular;
@@ -431,47 +392,23 @@ $font-secondary-regular: 'Codac Pro Regular';
     }
 }
 
-
-
-
-
-
-
-
-
-.button-center {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    max-width: 400px;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.list__buttons:hover .button-center {
+//hover on buttons
+.list__buttons:hover .button--center,
+.list__buttons:hover .button__text-block {
     transform: translateY(-10px);
 }
 
-.list__buttons:hover .button__text-block-center{
-    transform: translateY(-10px);
-}
 
-.list__buttons:hover .button-right {
+.list__buttons:hover .button--right,
+.list__buttons:hover .button__text-block--right {
     transform: translate(-10px, -10px);
 }
 
-.list__buttons:hover .button__text-block-right {
-    transform: translate(-10px, -10px);
-}
 
-.list__buttons:hover .button-left {
+.list__buttons:hover .button--left,
+.list__buttons:hover .button__text-block--left {
     transform: translate(10px, -10px);
 }
-
-.list__buttons:hover .button__text-block-left {
-    transform: translate(10px, -10px);
-}
-
 
 
 .item{

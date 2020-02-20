@@ -236,7 +236,6 @@
   font-size: 36px;
   color: #D91F1F;
 }
-
 .section--01 {
   display: flex;
   flex-direction: column;
@@ -275,59 +274,39 @@
   max-width: 387px;
 }
 
-.button-right {
+.button {
   display: block;
   position: absolute;
   bottom: 0;
+  max-width: 387px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.button--center {
+  max-width: 400px;
+}
+.button--right {
   left: 0;
-  max-width: 387px;
-  transition: all 0.5s;
-  cursor: pointer;
 }
-
-.button-left {
-  display: block;
-  position: absolute;
-  bottom: 0;
+.button--left {
   right: 0;
-  max-width: 387px;
-  transition: all 0.5s;
-  cursor: pointer;
 }
-
-.button__text-block-left {
-  display: block;
+.button__text-block {
   position: absolute;
+  display: block;
+  max-width: 200px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.button__text-block--left {
   bottom: 50px;
   right: 30px;
-  max-width: 387px;
-  transition: all 0.5s;
-  cursor: pointer;
-  transition: all 0.5s;
-  text-transform: uppercase;
-  text-align: center;
 }
-.button__text-block-right {
-  display: block;
-  position: absolute;
+.button__text-block--right {
   bottom: 50px;
   left: 30px;
-  max-width: 387px;
-  transition: all 0.5s;
-  cursor: pointer;
-  transition: all 0.5s;
-  text-transform: uppercase;
-  text-align: center;
-}
-.button__text-block-center {
-  display: block;
-  position: absolute;
-  max-width: 387px;
-  transition: all 0.5s;
-  cursor: pointer;
-  transition: all 0.5s;
-  text-transform: uppercase;
-  text-align: center;
 }
 .button__title {
   font-family: "Druk Text Wide Regular";
@@ -347,36 +326,18 @@
   color: #BA3D21;
 }
 
-.button-center {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  max-width: 400px;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.list__buttons:hover .button-center {
+.list__buttons:hover .button--center,
+.list__buttons:hover .button__text-block {
   transform: translateY(-10px);
 }
 
-.list__buttons:hover .button__text-block-center {
-  transform: translateY(-10px);
-}
-
-.list__buttons:hover .button-right {
+.list__buttons:hover .button--right,
+.list__buttons:hover .button__text-block--right {
   transform: translate(-10px, -10px);
 }
 
-.list__buttons:hover .button__text-block-right {
-  transform: translate(-10px, -10px);
-}
-
-.list__buttons:hover .button-left {
-  transform: translate(10px, -10px);
-}
-
-.list__buttons:hover .button__text-block-left {
+.list__buttons:hover .button--left,
+.list__buttons:hover .button__text-block--left {
   transform: translate(10px, -10px);
 }
 
