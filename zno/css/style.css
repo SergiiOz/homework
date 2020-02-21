@@ -50,6 +50,11 @@
   padding: 0 15px;
   margin: 0 auto;
 }
+.wrapper__footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
 .header {
   display: flex;
@@ -141,6 +146,9 @@
   top: 0;
   right: 0;
   max-width: 314px;
+}
+.header__slogan {
+  width: 100%;
 }
 
 .image {
@@ -622,28 +630,38 @@
 
 .picture-box {
   margin: 0 auto;
-  max-width: 494px;
+  max-width: 520px;
+  padding: 0 15px;
 }
 
 .footer {
   background-color: #000;
+  font-family: "Codac Pro Regular";
   color: #FFD703;
   text-transform: uppercase;
+  padding: 20px 0;
+}
+.footer__slogan-block {
+  text-align: center;
+  padding: 0 5px;
+}
+.footer__slogan {
+  color: #FFD703;
 }
 .footer__main {
-  padding-top: 100px;
+  padding: 100px 0 40px;
 }
 .footer__footer {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .footer__title {
   font-family: "Druk Text Wide Regular";
   font-size: 22px;
+  margin-bottom: 10px;
 }
 .footer__list {
   display: flex;
   justify-content: space-between;
-  max-width: 800px;
   margin: 0 auto;
 }
 .footer__link {
@@ -655,17 +673,71 @@
 .footer__link--up {
   font-family: "Druk Text Wide Bold";
   font-size: 22px;
+  float: right;
 }
 .footer__link:hover {
   color: #BA3D21;
 }
 .footer__item {
   list-style-type: none;
-  margin-bottom: 5px;
+  padding: 8px 0;
 }
 .footer__signature {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.footer__arow-up {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.signature {
   font-size: "Codac Pro Regular";
   font-size: 13px;
+  padding: 5px;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+@-moz-keyframes scroll {
+  0% {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -moz-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+.marquee {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee .run {
+  display: inline-block;
+  padding-left: 100%;
+  -webkit-animation: scroll 15s infinite linear;
+  -moz-animation: scroll 15s infinite linear;
+  animation: scroll 15s infinite linear;
 }
 
 /*# sourceMappingURL=style.css.map */
