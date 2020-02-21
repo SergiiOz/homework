@@ -37,6 +37,10 @@
   color: #E8C512;
 }
 
+.mark-03 {
+  color: #5B21BA;
+}
+
 .page {
   background-color: #E5E5E5;
 }
@@ -624,6 +628,44 @@
 .footer {
   background-color: #000;
   color: #FFD703;
+  text-transform: uppercase;
+}
+.footer__main {
+  padding-top: 100px;
+}
+.footer__footer {
+  margin-top: 30px;
+}
+.footer__title {
+  font-family: "Druk Text Wide Regular";
+  font-size: 22px;
+}
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.footer__link {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Codac Pro Regular";
+  font-size: 14px;
+}
+.footer__link--up {
+  font-family: "Druk Text Wide Bold";
+  font-size: 22px;
+}
+.footer__link:hover {
+  color: #BA3D21;
+}
+.footer__item {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+.footer__signature {
+  font-size: "Codac Pro Regular";
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=style.css.map */

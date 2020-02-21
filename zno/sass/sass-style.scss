@@ -20,6 +20,11 @@ $font-secondary-regular: 'Codac Pro Regular';
 .mark-02 {
     color: #E8C512;
 }
+
+.mark-03 {
+    color: #5B21BA;
+}
+
 .page {
     background-color: #E5E5E5;;
 }
@@ -750,7 +755,58 @@ $font-secondary-regular: 'Codac Pro Regular';
 .footer {
     background-color: #000;
     color: #FFD703;
+    text-transform: uppercase;
+
+    &__main {
+        padding-top: 100px;
+    }
+
+    &__footer {
+        margin-top: 30px;
+    }
+
+    &__title {
+        font-family: $font-primary-regular;
+        font-size: 22px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        font-family: $font-secondary-regular;
+        font-size: 14px;
+        
+        &--up {
+            font-family: $font-primary-bold;
+            font-size: 22px;
+        }
+        
+        &:hover {
+            color: #BA3D21;
+        }
+    }
+
+    &__item {
+        list-style-type: none;
+        margin-bottom: 5px;
+    }
+
+    &__signature{
+        font-size: $font-secondary-regular;
+        font-size: 13px;
+    }
+
 }
+
+
+
 
 
 
