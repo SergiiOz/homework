@@ -384,6 +384,7 @@ $font-secondary-regular: 'Codac Pro Regular';
     }
 
     &__slogan {
+        text-align: center;
         font-size: 38px;
         font-weight: 900;
     }
@@ -639,10 +640,12 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 .section__item--right {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.item__step {
+.step {
     position: relative;
     display: flex;
     align-items: center;
@@ -652,16 +655,13 @@ $font-secondary-regular: 'Codac Pro Regular';
     font-size: 20px;
     font-weight: 900;
 
-    
-}
-    .step__btn {
+    &__btn {
         position: absolute;
         transition: all 0.5s;
         cursor: pointer;
     }
-
-
-    .step__description {
+    
+    &__description {
     position: absolute;
     max-width: 400px;
     font-family: $font-primary-heavy;
@@ -671,8 +671,24 @@ $font-secondary-regular: 'Codac Pro Regular';
     cursor: pointer;
     }
 
-    .item__step:hover .step__btn,
-    .item__step:hover .step__description {
+    // modifier position
+    &--position_01 {
+        padding-left: 30px;
+    }
+
+    &--position_02 {
+        padding-left: 60px;
+    }
+
+    &--position_03 {
+        padding-left: 90px;
+    }
+
+
+}
+
+    .step:hover .step__btn,
+    .step:hover .step__description {
         transform: translate(-10px, -10px);
     }
 

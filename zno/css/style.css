@@ -325,6 +325,7 @@
   padding: 42px 15px;
 }
 .section__slogan {
+  text-align: center;
   font-size: 38px;
   font-weight: 900;
 }
@@ -528,10 +529,12 @@
 }
 
 .section__item--right {
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.item__step {
+.step {
   position: relative;
   display: flex;
   align-items: center;
@@ -541,13 +544,11 @@
   font-size: 20px;
   font-weight: 900;
 }
-
 .step__btn {
   position: absolute;
   transition: all 0.5s;
   cursor: pointer;
 }
-
 .step__description {
   position: absolute;
   max-width: 400px;
@@ -557,9 +558,18 @@
   transition: all 0.5s;
   cursor: pointer;
 }
+.step--position_01 {
+  padding-left: 30px;
+}
+.step--position_02 {
+  padding-left: 60px;
+}
+.step--position_03 {
+  padding-left: 90px;
+}
 
-.item__step:hover .step__btn,
-.item__step:hover .step__description {
+.step:hover .step__btn,
+.step:hover .step__description {
   transform: translate(-10px, -10px);
 }
 
