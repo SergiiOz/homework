@@ -456,6 +456,10 @@
 .phablet__message-block {
   padding-top: 40px;
 }
+.phablet__message-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
 .phablet__message {
   position: relative;
   display: flex;
@@ -514,7 +518,7 @@
 
 .section__item {
   display: flex;
-  width: 50%;
+  padding: 0 10px;
 }
 
 .section__img-block-01 {
@@ -525,10 +529,13 @@
 }
 
 .section__item--left {
+  width: 100%;
+  max-width: 50%;
   justify-content: center;
 }
 
 .section__item--right {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -559,13 +566,13 @@
   cursor: pointer;
 }
 .step--position_01 {
-  padding-left: 30px;
+  margin-left: 30px;
 }
 .step--position_02 {
-  padding-left: 60px;
+  margin-left: 60px;
 }
 .step--position_03 {
-  padding-left: 90px;
+  margin-left: 90px;
 }
 
 .step:hover .step__btn,
