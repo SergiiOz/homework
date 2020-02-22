@@ -401,6 +401,7 @@ $font-secondary-regular: 'Codac Pro Regular';
         justify-content: center;
         align-items: center;
     }
+
 }
 
 .padding-btn {
@@ -626,6 +627,13 @@ $font-secondary-regular: 'Codac Pro Regular';
     width: 50%;
 }
 
+.section__img-block-01 {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    max-width: 200px;
+}
+
 .section__item--left {
     justify-content: center;
 }
@@ -644,34 +652,29 @@ $font-secondary-regular: 'Codac Pro Regular';
     font-size: 20px;
     font-weight: 900;
 
+    
 }
-
-    .item__step--mod_1 {
-        margin-left: 50px;
+    .step__btn {
+        position: absolute;
+        transition: all 0.5s;
+        cursor: pointer;
     }
 
-    .item__step--mod_2 {
-        margin-left: 100px;
-    }
 
-    .item__step--mod_3 {
-        margin-left: 150px;
-    }
-
-.item__description {
+    .step__description {
+    position: absolute;
+    max-width: 400px;
     font-family: $font-primary-heavy;
     font-size: 16px;
-    position: absolute;
     padding-left: 40px;
-}
+    transition: all 0.5s;
+    cursor: pointer;
+    }
 
-.section__img-block-01 {
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    max-width: 200px;
-}
-
+    .item__step:hover .step__btn,
+    .item__step:hover .step__description {
+        transform: translate(-10px, -10px);
+    }
 
 
 //SLIDER
@@ -834,6 +837,8 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 
+
+//running line
 @-webkit-keyframes scroll {
     0% {
         -webkit-transform: translate(0, 0);
