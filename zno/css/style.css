@@ -55,11 +55,26 @@
   margin: 0 auto;
   padding: 0 15px;
 }
+@media screen and (max-width: 960px) {
+  .wrapper__footer {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .wrapper__footer {
+    max-width: 530px;
+  }
+}
 
 .header {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+@media screen and (max-width: 720px) {
+  .header {
+    height: 700px;
+  }
 }
 .header__top {
   flex-grow: 1;
@@ -87,6 +102,12 @@
   height: 170px;
   width: 170px;
 }
+@media screen and (max-width: 720px) {
+  .header__items-block {
+    height: 150px;
+    width: 150px;
+  }
+}
 .header__item {
   position: absolute;
   z-index: 2;
@@ -98,6 +119,12 @@
   background-color: #D91F1F;
   transition: all 0.5s;
   cursor: pointer;
+}
+@media screen and (max-width: 720px) {
+  .header__item {
+    height: 150px;
+    width: 150px;
+  }
 }
 .header__item--above {
   display: flex;
@@ -123,6 +150,11 @@
   font-family: "Druk Text Wide Regular";
   font-size: 44px;
 }
+@media screen and (max-width: 720px) {
+  .header__title {
+    font-size: 36px;
+  }
+}
 .header__description {
   font-size: 15px;
   color: #000;
@@ -135,17 +167,48 @@
   left: 0;
   max-width: 350px;
 }
+@media screen and (max-width: 960px) {
+  .header__img-block-01 {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .header__img-block-01 {
+    max-width: 250px;
+  }
+}
 .header__img-block-02 {
   position: absolute;
   bottom: -5px;
   right: 280px;
   max-width: 304px;
 }
+@media screen and (max-width: 960px) {
+  .header__img-block-02 {
+    right: 100px;
+    max-width: 240px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .header__img-block-02 {
+    display: none;
+  }
+}
 .header__img-block-03 {
   position: absolute;
   top: 0;
   right: 0;
   max-width: 314px;
+}
+@media screen and (max-width: 960px) {
+  .header__img-block-03 {
+    max-width: 250px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .header__img-block-03 {
+    max-width: 200px;
+  }
 }
 .header__slogan {
   width: 100%;
@@ -160,6 +223,11 @@
   font-size: 24px;
   text-transform: uppercase;
   color: #fff;
+}
+@media screen and (max-width: 540px) {
+  .slogan {
+    font-size: 20px;
+  }
 }
 
 .lines-decor {
@@ -268,12 +336,40 @@
   font-size: 72px;
   color: #E8C512;
 }
+@media screen and (max-width: 960px) {
+  .section__title {
+    font-size: 62px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .section__title {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .section__title {
+    font-size: 40px;
+  }
+}
 .section__motto {
   font-size: 36px;
   color: #D91F1F;
 }
+@media screen and (max-width: 720px) {
+  .section__motto {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .section__motto {
+    font-size: 22px;
+  }
+}
 .section__top {
-  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
   background-color: #BA3D21;
   border-bottom: 5px solid #000;
 }
@@ -329,6 +425,11 @@
   font-size: 38px;
   font-weight: 900;
 }
+@media screen and (max-width: 960px) {
+  .section__slogan {
+    font-size: 28px;
+  }
+}
 
 .list__buttons {
   position: relative;
@@ -340,29 +441,23 @@
   justify-content: center;
   align-items: center;
 }
-
-.padding-btn {
-  display: block;
-  position: absolute;
-  bottom: 0;
+@media screen and (max-width: 960px) {
+  .list__buttons {
+    width: 300px;
+    height: 175px;
+  }
 }
-.padding-btn--center {
-  max-width: 400px;
-}
-.padding-btn--right {
-  left: 0;
-  max-width: 387px;
-}
-.padding-btn--left {
-  right: 0;
-  max-width: 387px;
+@media screen and (max-width: 960px) {
+  .list__buttons {
+    width: 250px;
+    height: 160px;
+  }
 }
 
 .button {
   display: block;
   position: absolute;
   bottom: 0;
-  max-width: 387px;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -388,14 +483,31 @@
   bottom: 50px;
   right: 30px;
 }
+@media screen and (max-width: 960px) {
+  .button__text-block--left {
+    bottom: 30px;
+    right: 15px;
+  }
+}
 .button__text-block--right {
   bottom: 50px;
   left: 30px;
+}
+@media screen and (max-width: 960px) {
+  .button__text-block--right {
+    bottom: 30px;
+    left: 15px;
+  }
 }
 .button__title {
   font-family: "Druk Text Wide Regular";
   font-size: 18px;
   color: #FFD703;
+}
+@media screen and (max-width: 960px) {
+  .button__title {
+    font-size: 14px;
+  }
 }
 .button__title--mod_1 {
   color: #BA3D21;
@@ -406,8 +518,30 @@
   font-size: 14px;
   color: #FFD703;
 }
+@media screen and (max-width: 960px) {
+  .button__description {
+    font-size: 12px;
+  }
+}
 .button__description--mod_1 {
   color: #BA3D21;
+}
+
+.padding-btn {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+.padding-btn--center {
+  max-width: 400px;
+}
+.padding-btn--right {
+  left: 0;
+  max-width: 387px;
+}
+.padding-btn--left {
+  right: 0;
+  max-width: 387px;
 }
 
 .list__buttons:hover .button--center,
@@ -432,6 +566,11 @@
 .item__section {
   width: 50%;
   padding: 0 30px;
+}
+@media screen and (max-width: 960px) {
+  .item__section {
+    padding: 0 15px;
+  }
 }
 .item__section--end {
   display: flex;
@@ -551,6 +690,16 @@
   font-size: 20px;
   font-weight: 900;
 }
+@media screen and (max-width: 960px) {
+  .step {
+    max-width: 330px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .step {
+    max-width: 280px;
+  }
+}
 .step__btn {
   position: absolute;
   transition: all 0.5s;
@@ -564,6 +713,18 @@
   padding-left: 40px;
   transition: all 0.5s;
   cursor: pointer;
+}
+@media screen and (max-width: 960px) {
+  .step__description {
+    font-size: 14px;
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .step__description {
+    font-size: 12px;
+    padding-left: 10px;
+  }
 }
 .step--position_01 {
   margin-left: 30px;
@@ -614,6 +775,11 @@
   display: flex;
   flex-direction: row;
 }
+@media screen and (max-width: 720px) {
+  .button-block__inner {
+    flex-direction: column;
+  }
+}
 
 .button-block__item {
   position: relative;
@@ -627,9 +793,14 @@
   padding-top: 15px;
   color: #fff;
   font-family: "Druk Text Wide Regular";
-  font-style: 16px;
+  font-size: 16px;
   text-transform: uppercase;
   transition: 0.5s all;
+}
+@media screen and (max-width: 720px) {
+  .button-text {
+    font-size: 12px;
+  }
 }
 .button-text--small {
   max-width: 260px;
@@ -694,6 +865,11 @@
   font-size: 22px;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 720px) {
+  .footer__title {
+    font-size: 16px;
+  }
+}
 .footer__list {
   display: flex;
   justify-content: space-between;
@@ -705,10 +881,20 @@
   font-family: "Codac Pro Regular";
   font-size: 14px;
 }
+@media screen and (max-width: 720px) {
+  .footer__link {
+    font-size: 12px;
+  }
+}
 .footer__link--up {
   font-family: "Druk Text Wide Bold";
   font-size: 22px;
   float: right;
+}
+@media screen and (max-width: 720px) {
+  .footer__link--up {
+    font-size: 16px;
+  }
 }
 .footer__link:hover {
   color: #BA3D21;
@@ -773,6 +959,10 @@
   -webkit-animation: scroll 15s infinite linear;
   -moz-animation: scroll 15s infinite linear;
   animation: scroll 15s infinite linear;
+}
+
+.logo {
+  max-width: 250px;
 }
 
 /*# sourceMappingURL=style.css.map */

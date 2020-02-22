@@ -1,5 +1,24 @@
 @import './fonts';
 
+// screen size
+@mixin screen-large {
+    @media screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin screen-medium {
+    @media screen and (max-width: 720px) {
+        @content;
+    }
+}
+
+@mixin screen-small {
+    @media screen and (max-width: 540px) {
+        @content;
+    }
+}
+
 $font-primary-regular: 'Druk Text Wide Regular';
 $font-primary-bold: 'Druk Text Wide Bold';
 $font-primary-heavy: 'Druk Text Wide Heavy';
@@ -38,6 +57,14 @@ $font-secondary-regular: 'Codac Pro Regular';
         max-width: 1000px;
         margin: 0 auto;
         padding: 0 15px;
+
+        @include screen-large() {
+            max-width: 720px;
+        }
+
+        @include screen-medium() {
+            max-width: 530px;
+        }
     }
 }
 
@@ -46,6 +73,10 @@ $font-secondary-regular: 'Codac Pro Regular';
     display: flex;
     flex-direction: column;
     height: 100vh;
+
+    @include screen-medium() {
+        height: 700px;
+    }
     
     &__top {
         flex-grow: 1;
@@ -76,6 +107,11 @@ $font-secondary-regular: 'Codac Pro Regular';
         position: relative;
         height: 170px;
         width:170px;
+
+        @include screen-medium() {
+            height: 150px;
+            width: 150px;
+        }
     }
 
     &__item {
@@ -89,6 +125,11 @@ $font-secondary-regular: 'Codac Pro Regular';
         background-color: #D91F1F;
         transition: all 0.5s;
         cursor: pointer;
+
+        @include screen-medium() {
+            height: 150px;
+            width: 150px;
+        }
     }
     
     &__item--above{
@@ -120,12 +161,17 @@ $font-secondary-regular: 'Codac Pro Regular';
     &__title{
         font-family: $font-primary-regular;
         font-size: 44px;
+
+        @include screen-medium() {
+            font-size: 36px;
+        }
     }
     
     &__description {
         font-size: 15px;
         color: #000;
         font-family: $font-primary-bold;
+
     }
 
     //picture Shevchenko
@@ -135,6 +181,14 @@ $font-secondary-regular: 'Codac Pro Regular';
         bottom: -5px;
         left: 0;
         max-width: 350px;
+
+        @include screen-large() {
+            max-width: 300px;
+        }
+
+        @include screen-medium(){
+            max-width: 250px;
+        }
     }
     
     //picture Olga
@@ -143,6 +197,16 @@ $font-secondary-regular: 'Codac Pro Regular';
         bottom: -5px;
         right: 280px;
         max-width: 304px;
+
+        @include screen-large() {
+            right: 100px;
+            max-width: 240px;
+        }
+
+        @include screen-medium() {
+            display: none;
+        }
+
     }
     
     //picture Shevchenko 2
@@ -151,6 +215,14 @@ $font-secondary-regular: 'Codac Pro Regular';
         top: 0;
         right: 0;
         max-width: 314px;
+
+        @include screen-large() {
+            max-width: 250px;
+        }
+
+        @include screen-medium(){
+            max-width: 200px;
+        }
     }
 
     &__slogan {
@@ -168,6 +240,10 @@ $font-secondary-regular: 'Codac Pro Regular';
     font-size: 24px;
     text-transform: uppercase;
     color: #fff;
+
+    @include screen-small() {
+        font-size: 20px;
+    }
 }
 
 
@@ -310,15 +386,38 @@ $font-secondary-regular: 'Codac Pro Regular';
     
         font-size: 72px;
         color: #E8C512;
+
+        @include screen-large() {
+            font-size: 62px;
+        }
+
+        @include screen-medium() {
+            font-size: 50px;
+        }
+
+        @include screen-small() {
+            font-size: 40px;
+        }
     }  
     
     &__motto{
         font-size: 36px;
         color: #D91F1F;
+
+        @include screen-medium() {
+            font-size: 28px;
+        }
+
+        @include screen-small() {
+            font-size: 22px;
+        }
     }
 
     &__top {
-        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 150px;
         background-color: #BA3D21;
         border-bottom: 5px solid #000;
     }
@@ -387,11 +486,17 @@ $font-secondary-regular: 'Codac Pro Regular';
         text-align: center;
         font-size: 38px;
         font-weight: 900;
+
+        @include screen-large(){
+            font-size: 28px;
+        }
     }
 }
 
 
 //LIST BUTTONS
+
+
 
 .list__buttons {
     position: relative;
@@ -405,38 +510,24 @@ $font-secondary-regular: 'Codac Pro Regular';
         align-items: center;
     }
 
-}
+    @include screen-large() {
+        width: 300px;
+        height: 175px;
+    }
 
-.padding-btn {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    
-    // center padding button
-    &--center {
-        max-width: 400px;
+    @include screen-large() {
+        width: 250px;
+        height: 160px;
     }
-    
-    //right padding button
-    &--right {
-        left: 0;
-        max-width: 387px;
-    }
-    
-    //left padding button
-    &--left {
-        right: 0;
-        max-width: 387px;
-    }
-}
 
+}
 
 //BUTTONS
 .button {
     display: block;
     position: absolute;
     bottom: 0;
-    max-width: 387px;
+    // max-width: 387px;
     transition: all 0.5s;
     cursor: pointer;
     
@@ -468,12 +559,23 @@ $font-secondary-regular: 'Codac Pro Regular';
         &--left {
             bottom: 50px;
             right: 30px;
+
+            @include screen-large() {
+                bottom: 30px;
+                right: 15px;
+            }
         }
 
         &--right {
             bottom: 50px;
             left: 30px;
+
+            @include screen-large() {
+                bottom: 30px;
+                left: 15px;
+            }
         }
+
     }
 
     //title buttons
@@ -481,6 +583,10 @@ $font-secondary-regular: 'Codac Pro Regular';
         font-family: $font-primary-regular;
         font-size: 18px;
         color: #FFD703;
+
+        @include screen-large() {
+            font-size: 14px;
+        }
         
         &--mod_1 {
             color: #BA3D21;
@@ -493,12 +599,42 @@ $font-secondary-regular: 'Codac Pro Regular';
         font-family: $font-secondary-regular;
         font-size: 14px;
         color: #FFD703;
+
+        @include screen-large() {
+            font-size: 12px;
+        }
         
         &--mod_1 {
             color: #BA3D21;
         }
     }
 }
+
+.padding-btn {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    
+    // center padding button
+    &--center {
+        max-width: 400px;
+    }
+    
+    //right padding button
+    &--right {
+        left: 0;
+        max-width: 387px;
+    }
+    
+    //left padding button
+    &--left {
+        right: 0;
+        max-width: 387px;
+    }
+}
+
+
+
 
 //hover on buttons
 .list__buttons:hover .button--center,
@@ -519,13 +655,19 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 
-.item{
+
+
+.item {
     display: flex;
     flex-direction: row;
-    
+
     &__section{
         width: 50%;
         padding: 0 30px;
+
+        @include screen-large() {
+            padding: 0 15px;
+        }
     }
     
     
@@ -539,7 +681,6 @@ $font-secondary-regular: 'Codac Pro Regular';
         justify-content: center;
     }
 }
-
 
 // SECTION with PHABLET and STEPS
 .section__inner{
@@ -661,11 +802,20 @@ $font-secondary-regular: 'Codac Pro Regular';
     position: relative;
     display: flex;
     align-items: center;
-    max-width: 485px;
+    max-width:485px;
     margin-bottom: 42px;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 900;
+
+    @include screen-large() {
+        max-width: 330px;
+    }
+
+    @include screen-medium() {
+        max-width: 280px;
+    }
+
 
     &__btn {
         position: absolute;
@@ -681,6 +831,16 @@ $font-secondary-regular: 'Codac Pro Regular';
     padding-left: 40px;
     transition: all 0.5s;
     cursor: pointer;
+
+    @include screen-large() {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+
+    @include screen-medium() {
+        font-size: 12px;
+        padding-left: 10px;
+    }
     }
 
     // modifier position
@@ -742,11 +902,17 @@ $font-secondary-regular: 'Codac Pro Regular';
     display: flex;
     justify-content: center;
     margin-top: 100px;
+
+
 }
 
 .button-block__inner{
     display: flex;
     flex-direction: row;
+    
+    @include screen-medium() {
+        flex-direction: column;
+    }
 }
 
 .button-block__item{
@@ -762,9 +928,13 @@ $font-secondary-regular: 'Codac Pro Regular';
     padding-top: 15px;
     color: #fff;
     font-family: $font-primary-regular;
-    font-style: 16px;
+    font-size: 16px;
     text-transform: uppercase;
     transition: 0.5s all;
+
+    @include screen-medium() {
+        font-size: 12px;
+    }
 
     &--small {
         max-width: 260px;
@@ -838,6 +1008,10 @@ $font-secondary-regular: 'Codac Pro Regular';
         font-family: $font-primary-regular;
         font-size: 22px;
         margin-bottom: 10px;
+
+        @include screen-medium() {
+            font-size: 16px;
+        }
     }
 
     &__list {
@@ -851,11 +1025,19 @@ $font-secondary-regular: 'Codac Pro Regular';
         color: inherit;
         font-family: $font-secondary-regular;
         font-size: 14px;
+
+        @include screen-medium() {
+            font-size: 12px;
+        }
         
         &--up {
             font-family: $font-primary-bold;
             font-size: 22px;
             float: right;
+
+            @include screen-medium() {
+                font-size: 16px;
+            }
         }
         
         &:hover {
@@ -932,6 +1114,10 @@ $font-secondary-regular: 'Codac Pro Regular';
     -webkit-animation: scroll 15s infinite linear;
     -moz-animation: scroll 15s infinite linear;
     animation: scroll 15s infinite linear;
+}
+
+.logo {
+    max-width: 250px;
 }
 
 
