@@ -26,7 +26,7 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 .page {
-    background-color: #E5E5E5;;
+    background-color: #000;
 }
 
 .wrapper {
@@ -391,6 +391,8 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 
+//LIST BUTTONS
+
 .list__buttons {
     position: relative;
     width: 400px;
@@ -539,6 +541,35 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 
+// SECTION with PHABLET and STEPS
+.section__inner{
+    display: flex;
+    flex-direction: row;
+}
+.section__item {
+    display: flex;
+    padding: 0 10px;
+}
+
+.section__img-block-01 {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    max-width: 200px;
+}
+
+.section__item--left {
+    width: 100%;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.section__item--right {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 //PHABLET 
 .phablet {
@@ -624,35 +655,8 @@ $font-secondary-regular: 'Codac Pro Regular';
 }
 
 
-.section__inner{
-    display: flex;
-    flex-direction: row;
-}
-.section__item {
-    display: flex;
-    padding: 0 10px;
-}
 
-.section__img-block-01 {
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    max-width: 200px;
-}
-
-.section__item--left {
-    width: 100%;
-    max-width: 50%;
-    justify-content: center;
-}
-
-.section__item--right {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
+// STEPS
 .step {
     position: relative;
     display: flex;
@@ -745,6 +749,32 @@ $font-secondary-regular: 'Codac Pro Regular';
     flex-direction: row;
 }
 
+.button-block__item{
+    position: relative;
+    padding: 0 30px;  
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+}
+
+.button-text {
+    position: absolute;
+    padding-top: 15px;
+    color: #fff;
+    font-family: $font-primary-regular;
+    font-style: 16px;
+    text-transform: uppercase;
+    transition: 0.5s all;
+
+    &--small {
+        max-width: 260px;
+    }
+
+    &--long {
+        max-width: 360px;
+    }
+}
+
 .button-small,
 .button-small-padding {
     max-width: 265px;
@@ -758,10 +788,6 @@ $font-secondary-regular: 'Codac Pro Regular';
     transition: 0.5s all;
 }
 
-.button-block__item{
-    position: relative;
-    padding: 0 30px;
-}
 
 .button-small,
 .button-long {
@@ -769,13 +795,12 @@ $font-secondary-regular: 'Codac Pro Regular';
     top:0;
 }
 
-.button-long:hover {
+.button-block__item:hover .button-small,
+.button-block__item:hover .button-text,
+.button-block__item:hover .button-long {
     transform: translate(10px, 10px);
 }
 
-.button-small:hover {
-    transform: translate(10px, 10px);
-}
 
 .picture-box {
     margin: 0 auto;

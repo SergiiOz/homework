@@ -42,7 +42,7 @@
 }
 
 .page {
-  background-color: #E5E5E5;
+  background-color: #000;
 }
 
 .wrapper {
@@ -442,6 +442,36 @@
   justify-content: center;
 }
 
+.section__inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.section__item {
+  display: flex;
+  padding: 0 10px;
+}
+
+.section__img-block-01 {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  max-width: 200px;
+}
+
+.section__item--left {
+  width: 100%;
+  max-width: 50%;
+  justify-content: center;
+}
+
+.section__item--right {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .phablet__title-block {
   max-width: 180px;
   margin: 0 auto;
@@ -509,36 +539,6 @@
 }
 .phablet__text--mod_1 {
   color: #000000;
-}
-
-.section__inner {
-  display: flex;
-  flex-direction: row;
-}
-
-.section__item {
-  display: flex;
-  padding: 0 10px;
-}
-
-.section__img-block-01 {
-  position: absolute;
-  bottom: -5px;
-  right: 0;
-  max-width: 200px;
-}
-
-.section__item--left {
-  width: 100%;
-  max-width: 50%;
-  justify-content: center;
-}
-
-.section__item--right {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .step {
@@ -615,6 +615,29 @@
   flex-direction: row;
 }
 
+.button-block__item {
+  position: relative;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-text {
+  position: absolute;
+  padding-top: 15px;
+  color: #fff;
+  font-family: "Druk Text Wide Regular";
+  font-style: 16px;
+  text-transform: uppercase;
+  transition: 0.5s all;
+}
+.button-text--small {
+  max-width: 260px;
+}
+.button-text--long {
+  max-width: 360px;
+}
+
 .button-small,
 .button-small-padding {
   max-width: 265px;
@@ -628,22 +651,15 @@
   transition: 0.5s all;
 }
 
-.button-block__item {
-  position: relative;
-  padding: 0 30px;
-}
-
 .button-small,
 .button-long {
   position: absolute;
   top: 0;
 }
 
-.button-long:hover {
-  transform: translate(10px, 10px);
-}
-
-.button-small:hover {
+.button-block__item:hover .button-small,
+.button-block__item:hover .button-text,
+.button-block__item:hover .button-long {
   transform: translate(10px, 10px);
 }
 
